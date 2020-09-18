@@ -1,11 +1,11 @@
 import {expect, assert} from "chai";
 import EntityFactory from "../helpers/EntityFactory";
-import {gestationalAgeCategoryAsOn, eddBasedOnGestationalAge, gestationalAgeAsOfToday, gestationalAgeForEDD} from "../../health_modules/mother/calculations";
-import motherConcepts from "../../health_modules/mother/metadata/motherConcepts.json";
-import commonConcepts from "../../health_modules/commonConcepts.json";
+import {gestationalAgeCategoryAsOn, eddBasedOnGestationalAge, gestationalAgeAsOfToday, gestationalAgeForEDD} from "../../src/health_modules/mother/calculations";
+import motherConcepts from "../../src/health_modules/mother/metadata/motherConcepts.json";
+import commonConcepts from "../../src/health_modules/commonConcepts.json";
 import ProgramFactory from "../helpers/ProgramFactory";
 import EnrolmentFiller from "../helpers/EnrolmentFiller";
-import program from "../../health_modules/mother/metadata/motherProgram";
+import program from "../../src/health_modules/mother/metadata/motherProgram";
 import moment from "moment";
 
 

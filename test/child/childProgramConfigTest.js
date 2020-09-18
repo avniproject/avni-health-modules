@@ -1,8 +1,8 @@
-import config from "../../health_modules/child/childProgramConfig";
+import config from "../../src/health_modules/child/childProgramConfig";
 const expect = require('chai').expect;
 import _ from "lodash";
 import {ProgramEnrolment, Gender, Individual} from 'avni-models';
-import wfa_boys from "../../health_modules/child/anthropometry/wfa_boys";
+import wfa_boys from "../../src/health_modules/child/anthropometry/wfa_boys";
 
 
 describe("Child Program Config", () => {

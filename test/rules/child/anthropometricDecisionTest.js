@@ -5,10 +5,10 @@ import {
     Concept, Gender, Observation, PrimitiveValue, ProgramEncounter,
     ProgramEnrolment, Individual
 } from 'avni-models';
-import {getDecisions} from "../../../health_modules/child/anthropometricDecision";
+import {getDecisions} from "../../../src/health_modules/child/anthropometricDecision";
 import EntityFactory from "../../helpers/EntityFactory";
 import moment from "moment";
-import C from "../../../health_modules/common";
+import C from "../../../src/health_modules/common";
 
 describe("Anthropometric Decisions", () => {
     let programEncounter, girl, boy, weightConcept, heightConcept;

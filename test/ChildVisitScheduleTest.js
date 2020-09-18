@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var getchildVisitSchedule = require('../health_modules/child/childVisitSchedule');
+var getchildVisitSchedule = require('../src/health_modules/child/childVisitSchedule');
 const ProgramEnrolment = require("./Entities").ProgramEnrolment;
 const ProgramEncounter = require("./Entities").ProgramEncounter;
 

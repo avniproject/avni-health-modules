@@ -1,4 +1,4 @@
-import C from '../health_modules/common';
+import C from '../src/health_modules/common';
 import {areAnswersDefinedForCodedConcept} from './Concepts';
 import _ from 'lodash';
 

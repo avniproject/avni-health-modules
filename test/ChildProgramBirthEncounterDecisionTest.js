@@ -1,18 +1,18 @@
 import ProgramFactory from "./helpers/ProgramFactory";
 import IndividualBuilder from "./helpers/IndividualBuilder";
-import program from "../health_modules/child/metadata/childProgram.json";
-import childConcepts from "../health_modules/child/metadata/concepts.json";
-import commonConcepts from "../health_modules/commonConcepts.json";
-import enrolmentForm from "../health_modules/child/metadata/childProgramEnrolmentForm.json";
-import birthForm from "../health_modules/child/metadata/birthForm";
+import program from "../src/health_modules/child/metadata/childProgram.json";
+import childConcepts from "../src/health_modules/child/metadata/concepts.json";
+import commonConcepts from "../src/health_modules/commonConcepts.json";
+import enrolmentForm from "../src/health_modules/child/metadata/childProgramEnrolmentForm.json";
+import birthForm from "../src/health_modules/child/metadata/birthForm";
 import EnrolmentFiller from "./helpers/EnrolmentFiller";
 import EncounterFiller from "./helpers/EncounterFiller";
 import TestHelper from "./TestHelper";
 
 const assert = require('chai').assert;
 const _ = require('lodash');
-const childEncounterDecision = require('../health_modules/child/childProgramEncounterDecision');
-const C = require('../health_modules/common');
+const childEncounterDecision = require('../src/health_modules/child/childProgramEncounterDecision');
+const C = require('../src/health_modules/common');
 
 describe("Child Program Birth", () => {
     let programData, enrolment, individual, lmpDate,

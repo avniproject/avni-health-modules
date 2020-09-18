@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var decision = require('../health_modules/outpatient/encounterDecision');
+var decision = require('../src/health_modules/outpatient/encounterDecision');
 var {Encounter, Form} = require('./Entities');
 
 describe('Make Decision', function () {
@@ -110,7 +110,7 @@ describe('Make Decision', function () {
     it('Boundary condition of weight', () => {
         var complaintConceptName = "Complaint";
         var decisions = decision.getDecisions(new Encounter('Outpatient').setObservation(complaintConceptName, ["Fever"]).setGender("Male").setAge(10).setObservation("Weight", 5.5).setObservation("Paracheck", ["Positive PV"])).encounterDecisions;
-        assert.isNotEmpty(decisions.find(decision => decision.name === 'Treatment Advice').value); 
+        assert.isNotEmpty(decisions.find(decision => decision.name === 'Treatment Advice').value);
     });
 
     it('Fever, Body Ache & Vomiting', () => {
@@ -156,13 +156,13 @@ describe('Make Decision', function () {
 
     var treatmentAdviceIsEmpty = (complaints, nonDefaultEncounter) => {
         verifyPrescriptionForComplaints(complaints, (decisions,message) => {
-            assert.isEmpty(decisions.find(decision => decision.name === 'Treatment Advice').value); 
+            assert.isEmpty(decisions.find(decision => decision.name === 'Treatment Advice').value);
         }, nonDefaultEncounter);
     }
 
     var referralAdviceIsGenerated = (complaints, nonDefaultEncounter) => {
         verifyPrescriptionForComplaints(complaints, (decisions,message) => {
-            assert.isNotEmpty(decisions.find(decision => decision.name === 'Referral Advice')); 
+            assert.isNotEmpty(decisions.find(decision => decision.name === 'Referral Advice'));
             assert.equal((message.match(/लोक बिरादरी दवाखाण्यात पुढील उपचाराकरिता पाठवावे/g) || []).length, 1, message);
         }, nonDefaultEncounter);
     }

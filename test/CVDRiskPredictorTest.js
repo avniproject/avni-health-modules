@@ -1,9 +1,9 @@
 var expect = require('chai').expect;
 const assert = require('chai').assert;
-var riskPredictor = require('../health_modules/ncd/cvdRiskPredictor');
+var riskPredictor = require('../src/health_modules/ncd/cvdRiskPredictor');
 const ProgramEncounter = require("./Entities").ProgramEncounter;
 const Individual = require("./Entities").Individual;
-const C = require('../health_modules/common');
+const C = require('../src/health_modules/common');
 import {Gender} from 'avni-models';
 
 describe('Make Decision', function () {

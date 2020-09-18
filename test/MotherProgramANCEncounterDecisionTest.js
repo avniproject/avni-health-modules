@@ -1,10 +1,10 @@
 import ProgramFactory from "./helpers/ProgramFactory";
 import IndividualBuilder from "./helpers/IndividualBuilder";
-import program from "../health_modules/mother/metadata/motherProgram";
-import motherConcepts from "../health_modules/mother/metadata/motherConcepts.json";
-import commonConcepts from "../health_modules/commonConcepts.json";
-import enrolmentForm from "../health_modules/mother/metadata/motherProgramEnrolmentForm.json";
-import ancForm from "../health_modules/mother/metadata/motherANCForm";
+import program from "../src/health_modules/mother/metadata/motherProgram";
+import motherConcepts from "../src/health_modules/mother/metadata/motherConcepts.json";
+import commonConcepts from "../src/health_modules/commonConcepts.json";
+import enrolmentForm from "../src/health_modules/mother/metadata/motherProgramEnrolmentForm.json";
+import ancForm from "../src/health_modules/mother/metadata/motherANCForm";
 import EnrolmentFiller from "./helpers/EnrolmentFiller";
 import EncounterFiller from "./helpers/EncounterFiller";
 import TestHelper from "./TestHelper";
@@ -12,8 +12,8 @@ import TestHelper from "./TestHelper";
 const moment = require('moment');
 const assert = require('chai').assert;
 const _ = require('lodash');
-const motherEncounterDecision = require('../health_modules/mother/motherProgramEncounterDecision');
-const C = require('../health_modules/common');
+const motherEncounterDecision = require('../src/health_modules/mother/motherProgramEncounterDecision');
+const C = require('../src/health_modules/common');
 
 describe("Mother Program ANC", () => {
     let refDate = moment('2018-01-01');

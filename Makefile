@@ -33,13 +33,6 @@ upload = \
 		-H "USER-NAME: admin"  \
 		-H "AUTH-TOKEN: $(token)"
 
-# <test>
-test-health-modules: setup_hosts as_dev
-	$(call test,health-modules)
-
-test: test-health-modules  ##
-# </test>
-
 # <rules>
 build_rules: ## Create webpack files for all the rules
 	python build-config/json_validation.py health_modules
@@ -138,9 +131,6 @@ deploy_referral_concepts_fix: auth
 
 # <Workflows related, Composite, Convenience and Conventional Actions>
 deploy: deploy_metadata
-
-test: test_env
-# </Workflows related, Composite, Convenience and Conventional Actions>
 
 deploy_demo_refdata:
 	@echo "----------"

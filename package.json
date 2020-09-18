@@ -4,7 +4,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/OpenCHS/lokbiradari-vhw.git"
+    "url": "https://github.com/avniproject/avni-health-modules.git"
   },
   "license": "AGPL-3.0",
   "scripts": {

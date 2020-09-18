@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var assert = require('chai').assert;
-var C = require('../health_modules/common');
+var C = require('../src/health_modules/common');
 
 describe('CommonTest', () => {
     it('addDays', () => {
@@ -19,16 +19,16 @@ describe('CommonTest', () => {
     });
 
     it('isEmptyOrBlank should correctly identify empty values', () => {
-        expect(C.isEmptyOrBlank()).to.be.true; 
-        expect(C.isEmptyOrBlank({})).to.be.true; 
-        expect(C.isEmptyOrBlank([])).to.be.true; 
+        expect(C.isEmptyOrBlank()).to.be.true;
+        expect(C.isEmptyOrBlank({})).to.be.true;
+        expect(C.isEmptyOrBlank([])).to.be.true;
         expect(C.isEmptyOrBlank("")).to.be.true;
-        expect(C.isEmptyOrBlank(new String(""))).to.be.true; 
-        expect(C.isEmptyOrBlank(null)).to.be.true; 
-        expect(C.isEmptyOrBlank(NaN)).to.be.true; 
+        expect(C.isEmptyOrBlank(new String(""))).to.be.true;
+        expect(C.isEmptyOrBlank(null)).to.be.true;
+        expect(C.isEmptyOrBlank(NaN)).to.be.true;
         expect(C.isEmptyOrBlank(0)).to.be.false;
-        expect(C.isEmptyOrBlank("abc")).to.be.false; 
-        expect(C.isEmptyOrBlank(false)).to.be.false; 
-        expect(C.isEmptyOrBlank(true)).to.be.false; 
+        expect(C.isEmptyOrBlank("abc")).to.be.false;
+        expect(C.isEmptyOrBlank(false)).to.be.false;
+        expect(C.isEmptyOrBlank(true)).to.be.false;
     });
 });

@@ -4,7 +4,7 @@ import {
     prescription,
     convertPrescriptionsToMarathi,
     malariaPrescriptionMessage
-} from "../../health_modules/outpatient/malariaMedication";
+} from "../../src/health_modules/outpatient/malariaMedication";
 import {
     Encounter,
     Concept,

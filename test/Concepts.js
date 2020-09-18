@@ -1,20 +1,20 @@
 const _ = require('lodash');
 
-const CommonConcepts = require('../health_modules/commonConcepts.json');
-const ChildConcepts = require('../health_modules/child/metadata/concepts.json');
-const MotherConcepts = require('../health_modules/mother/metadata/motherConcepts.json');
-const OPDConcepts = require('../health_modules/outpatient/metadata/concepts.json');
+const CommonConcepts = require('../src/health_modules/commonConcepts.json');
+const ChildConcepts = require('../src/health_modules/child/metadata/concepts.json');
+const MotherConcepts = require('../src/health_modules/mother/metadata/motherConcepts.json');
+const OPDConcepts = require('../src/health_modules/outpatient/metadata/concepts.json');
 
-const ChildProgramEncounterForm = require('../health_modules/child/metadata/childDefaultProgramEncounterForm.json');
-const ChildProgramEnrolmentForm = require('../health_modules/child/metadata/childProgramEnrolmentForm.json');
-const ChildProgramExitForm = require('../health_modules/child/metadata/childProgramExitForm.json');
-const MotherAbortionForm = require('../health_modules/mother/metadata/motherAbortionForm.json');
-const MotherANCForm = require('../health_modules/mother/metadata/motherANCForm.json');
-const MotherDeliveryForm = require('../health_modules/mother/metadata/motherDeliveryForm.json');
-const MotherPNCForm = require('../health_modules/mother/metadata/motherPNCForm.json');
-const MotherProgramEnrolmentForm = require('../health_modules/mother/metadata/motherProgramEnrolmentForm.json');
-const MotherProgramExitForm = require('../health_modules/mother/metadata/motherProgramExitForm.json');
-const OPDEncounterForm = require('../health_modules/outpatient/metadata/encounterForm.json');
+const ChildProgramEncounterForm = require('../src/health_modules/child/metadata/childDefaultProgramEncounterForm.json');
+const ChildProgramEnrolmentForm = require('../src/health_modules/child/metadata/childProgramEnrolmentForm.json');
+const ChildProgramExitForm = require('../src/health_modules/child/metadata/childProgramExitForm.json');
+const MotherAbortionForm = require('../src/health_modules/mother/metadata/motherAbortionForm.json');
+const MotherANCForm = require('../src/health_modules/mother/metadata/motherANCForm.json');
+const MotherDeliveryForm = require('../src/health_modules/mother/metadata/motherDeliveryForm.json');
+const MotherPNCForm = require('../src/health_modules/mother/metadata/motherPNCForm.json');
+const MotherProgramEnrolmentForm = require('../src/health_modules/mother/metadata/motherProgramEnrolmentForm.json');
+const MotherProgramExitForm = require('../src/health_modules/mother/metadata/motherProgramExitForm.json');
+const OPDEncounterForm = require('../src/health_modules/outpatient/metadata/encounterForm.json');
 import {Concept} from "avni-models";
 
 

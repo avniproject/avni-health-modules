@@ -4,11 +4,11 @@ const expect = require('chai').expect;
 const moment = require('moment');
 const assert = require('chai').assert;
 const _ = require('lodash');
-const motherEncounterDecision = require('../health_modules/mother/motherProgramEncounterDecision');
-const motherEnrolmentDecision = require('../health_modules/mother/motherProgramEnrolmentDecision');
+const motherEncounterDecision = require('../src/health_modules/mother/motherProgramEncounterDecision');
+const motherEnrolmentDecision = require('../src/health_modules/mother/motherProgramEnrolmentDecision');
 const ProgramEncounter = require("./Entities").ProgramEncounter;
 const ProgramEnrolment = require("./Entities").ProgramEnrolment;
-const C = require('../health_modules/common');
+const C = require('../src/health_modules/common');
 const concepts = require('./Concepts');
 
 describe('High Risk Pregnancy Determination', () => {

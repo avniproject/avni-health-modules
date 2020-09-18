@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 var assert = require('chai').assert;
-var getNextFormGroupElement = require('../health_modules/formElementGroupDecision');
-var C = require('../health_modules/common');
+var getNextFormGroupElement = require('../src/health_modules/formElementGroupDecision');
+var C = require('../src/health_modules/common');
 
 describe('Get next form group element for stroke', function () {
 
