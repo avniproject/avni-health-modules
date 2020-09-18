@@ -1,4 +1,4 @@
-import C from "../common";
+import {common as C} from "../common";
 import _ from "lodash";
 import moment from 'moment';
 

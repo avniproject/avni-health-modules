@@ -122,9 +122,9 @@ function C() {
     };
 
     this.isEmptyOrBlank = (value) =>
-        _.overSome([_.isNil, _.isNaN])(value) ? true : 
+        _.overSome([_.isNil, _.isNaN])(value) ? true :
             _.overSome([_.isNumber, _.isBoolean, _.isDate])(value) ? false :
-                    _.isEmpty(value); 
+                    _.isEmpty(value);
 
     this.getYoungestChild = (individual) => {
         return _.chain(individual.getRelatives('mother', true)).filter(_.isObject).sortBy('dateOfBirth').last().value();
@@ -146,8 +146,8 @@ function C() {
 
     this.weeksBetween = (arg1, arg2) => {
         return moment.duration(moment(arg1).diff(moment(arg2))).asWeeks();
-    }    
+    }
 }
 
-module.exports = new C();
-
+export const common = new C();
+export default common;
