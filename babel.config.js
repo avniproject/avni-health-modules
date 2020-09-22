@@ -1,37 +1,25 @@
-require("@babel/register");
-
-module.exports = function (api) {
-    api.cache(true);
-
-    const presets = [
-        "@babel/preset-env",
-        "@babel/preset-flow"
-    ];
-    const plugins = [
-        [
-            require.resolve('babel-plugin-module-resolver'),
+module.exports = {
+    presets: [
+        ["@babel/env",
             {
-                root: ["./"],
-                alias: {
-                    "avni-models": "./node_modules/openchs-models"
+                targets: {
+                    node: "current"
                 }
             }
-        ],
-        "transform-class-properties",
-        "@babel/plugin-proposal-object-rest-spread",
-        "transform-export-extensions",
-        [
-            "@babel/plugin-proposal-decorators",
-            {
-                "legacy": true
-            }
-        ],
+        ]
+    ],
+    plugins: [
         "@babel/plugin-proposal-class-properties",
-        "transform-es2015-destructuring",
-    ];
-
-    return {
-        presets,
-        plugins
-    };
+        "@babel/plugin-proposal-object-rest-spread"
+    ],
+    env: {
+        "test": {
+            "plugins": [
+                [
+                    "istanbul"
+                ]
+            ]
+        }
+    },
+    sourceMaps: true
 };
