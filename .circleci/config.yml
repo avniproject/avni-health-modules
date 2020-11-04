@@ -16,9 +16,11 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
 
-      - run: yarn install
+      - run: make deps
 
-      - run: yarn build
+      - run: make build
+
+      - run: make test
 
       - save_cache:
           paths:
