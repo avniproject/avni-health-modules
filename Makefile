@@ -14,6 +14,9 @@ deps: check-node-v
 build: check-node-v
 	yarn run build
 
+test: check-node-v
+	yarn test
+
 release:
 	git pull --tags
 	git pull --rebase

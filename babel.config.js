@@ -1,14 +1,20 @@
-module.exports = {
-    presets: [
-        ["@babel/env",
+module.exports = function (api) {
+    api.cache(true);
+
+    const presets = [
+        "@babel/preset-env",
+        // "@babel/preset-flow"
+    ];
+    const plugins = [
+        [
+            require.resolve('babel-plugin-module-resolver'),
             {
-                targets: {
-                    node: "current"
+                root: ["./"],
+                alias: {
+                    "avni-models": "./node_modules/openchs-models"
                 }
             }
-        ]
-    ],
-    plugins: [
+        ],
         ["inline-json-import", {}],
         [
             "@babel/plugin-proposal-decorators",
@@ -17,16 +23,13 @@ module.exports = {
             }
         ],
         "@babel/plugin-proposal-class-properties",
-        "@babel/plugin-proposal-object-rest-spread"
-    ],
-    env: {
-        "test": {
-            "plugins": [
-                [
-                    "istanbul"
-                ]
-            ]
-        }
-    },
-    sourceMaps: true
+    ];
+
+    const sourceMaps = true;
+
+    return {
+        presets,
+        plugins,
+        sourceMaps
+    };
 };
