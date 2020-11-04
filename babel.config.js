@@ -9,6 +9,13 @@ module.exports = {
         ]
     ],
     plugins: [
+        ["inline-json-import", {}],
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ],
         "@babel/plugin-proposal-class-properties",
         "@babel/plugin-proposal-object-rest-spread"
     ],

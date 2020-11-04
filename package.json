@@ -9,19 +9,22 @@
   "main": "dist/index.js",
   "license": "AGPL-3.0",
   "scripts": {
-    "build": "babel src --out-dir dist --extensions '.js','.json'"
+    "build": "babel src --out-dir dist --extensions '.js'"
   },
   "dependencies": {
     "lodash": "4.17.11",
-    "moment": "2.19.3"
+    "moment": "2.19.3",
+    "rules-config": "github:openchs/rules-config#08202533ec3f3a55977946c69d204f3df8080e61"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-inline-json-import": "^0.3.2",
     "babel-plugin-istanbul": "^5.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-register": "^7.0.0-beta.3"

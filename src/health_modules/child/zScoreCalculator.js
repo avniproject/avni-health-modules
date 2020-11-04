@@ -1,10 +1,10 @@
 import _ from "lodash";
-import wfa_boys from "./anthropometry/wfa_boys";
-import wfa_girls from "./anthropometry/wfa_girls";
-import hfa_boys from "./anthropometry/lhfa_boys";
-import hfa_girls from "./anthropometry/lhfa_girls";
-import wfh_boys from "./anthropometry/wflh_boys";
-import wfh_girls from "./anthropometry/wflh_girls";
+import wfa_boys from "./anthropometry/wfa_boys.json";
+import wfa_girls from "./anthropometry/wfa_girls.json";
+import hfa_boys from "./anthropometry/lhfa_boys.json";
+import hfa_girls from "./anthropometry/lhfa_girls.json";
+import wfh_boys from "./anthropometry/wflh_boys.json";
+import wfh_girls from "./anthropometry/wflh_girls.json";
 
 const isPropNil = (o, path) => _.isNil(_.get(o, path));
 
