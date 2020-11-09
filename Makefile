@@ -17,11 +17,6 @@ help:
 port:= $(if $(port),$(port),8021)
 server:= $(if $(server),$(server),http://localhost)
 
-# <env> (Code Environment)
-test_env: ## Run unit tests
-	npm test
-# </env>
-
 token:=
 poolId:=
 clientId:=
@@ -151,7 +146,6 @@ dev_deploy_platform_translations:
 	@echo
 	$(call upload,platformTranslation,@translations/ka_IN.json)
 
-test: test_env
 # </Workflows related, Composite, Convenience and Conventional Actions>
 
 deploy_demo_refdata:
