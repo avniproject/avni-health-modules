@@ -222,6 +222,7 @@
     "location": "Location",
     "trackLocation": "Track Location",
     "visitsBeingScheduled": "Visits Being Scheduled",
+    "visitsBeingScheduledForOthers": "Visits Being Scheduled For Others",
     "visitName": "Visit Name",
     "schedulingFor": "Scheduling For",
     "overdueBy": "Overdue After",

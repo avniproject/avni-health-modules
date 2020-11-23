@@ -274,6 +274,7 @@
     "noCompletedEncounters": "पूर्ण झालेले कोणतेही भेटी नाहीत",
     "noPlannedEncounters": "नियोजित भेटी नाहीत",
     "visitsBeingScheduled": "द्यावयाच्या घरभेटी",
+    "visitsBeingScheduledForOthers": "इतरांना द्यावयाच्या घरभेटी",
     "visitName": "घर भेटीचा प्रकार",
     "schedulingFor": "घर भेटीची नियोजित तारीख",
     "overdueBy": "घर भेटीची मुदत संपण्याची तारीख",

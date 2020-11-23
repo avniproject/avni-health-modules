@@ -221,6 +221,7 @@
     "location": "இடம்",
     "trackLocation": "இருப்பிட கண்காணிப்பு",
     "visitsBeingScheduled": "சந்திப்பு திட்டமிடப்பட்டுள்ளது",
+    "visitsBeingScheduledForOthers": "வருகைகள் மற்றவர்களுக்கு திட்டமிடப்பட்டுள்ளன",
     "visitName": "சந்திப்பின் நோக்கம் ",
     "schedulingFor": "திட்டமிடல்",
     "overdueBy": "பின் நிலுவை",

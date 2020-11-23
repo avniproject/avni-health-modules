@@ -223,6 +223,7 @@
     "giveLocationPermissions": "સ્થાન મેળવો બટન પર ક્લિક કરો અને પૂછવામાં આવે ત્યારે પરવાનગીઓ આપો",
     "giveLocationPermissionFromSettings": "કૃપા કરી ને Settings > Apps > OpenCHS માં જઈ ને OpenCHS ને લોકેશન ની પરવાનગી આપો",
     "visitsBeingScheduled": "સુનિશ્ચિત થયેલી મુલાકાતો",
+    "visitsBeingScheduledForOthers": "મુલાકાત અન્ય માટે સુનિશ્ચિત કરવામાં આવી રહી છે",
     "visitName": "મુલાકાત નું નામ",
     "schedulingFor": "મુલાકાત ની તારીખ",
     "overdueBy": "છેલ્લી તારીખ",
