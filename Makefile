@@ -42,7 +42,7 @@ upload = \
 		-H "AUTH-TOKEN: $(token)"
 
 # <metadata>
-deploy_metadata: auth dev_deploy_metadata dev_deploy_platform_translations ## Upload metadata to server; poolId,clientId,username,password should be set if not deploying to local
+deploy_metadata: auth dev_deploy_metadata ## Upload metadata to server; poolId,clientId,username,password should be set if not deploying to local
 
 dev_deploy_metadata: ## Upload metadata to server
 	@echo "-----------------"
@@ -129,23 +129,6 @@ deploy_referral_concepts_fix: auth
 # <Workflows related, Composite, Convenience and Conventional Actions>
 deploy: deploy_metadata
 
-deploy_translations: deploy_platform_translations
-
-deploy_platform_translations: auth dev_deploy_platform_translations
-
-dev_deploy_platform_translations:
-	$(call upload,platformTranslation,@translations/en.json)
-	@echo
-	$(call upload,platformTranslation,@translations/gu_IN.json)
-	@echo
-	$(call upload,platformTranslation,@translations/hi_IN.json)
-	@echo
-	$(call upload,platformTranslation,@translations/mr_IN.json)
-	@echo
-	$(call upload,platformTranslation,@translations/ta_IN.json)
-	@echo
-	$(call upload,platformTranslation,@translations/ka_IN.json)
-
 # </Workflows related, Composite, Convenience and Conventional Actions>
 
 deploy_demo_refdata:
@@ -178,14 +161,8 @@ deploy_common_concepts_live:
 deploy_metadata_staging:
 	make deploy poolId=$(OPENCHS_STAGING_USER_POOL_ID) clientId=$(OPENCHS_STAGING_APP_CLIENT_ID) server=https://staging.openchs.org port=443 username=admin password=$(password)
 
-deploy_platform_translations_staging:
-	make deploy_translations poolId=$(OPENCHS_STAGING_USER_POOL_ID) clientId=$(OPENCHS_STAGING_APP_CLIENT_ID) server=https://staging.openchs.org port=443 username=admin password=$(password)
-
 deploy_metadata_uat:
 	make deploy poolId=$(OPENCHS_UAT_USER_POOL_ID) clientId=$(OPENCHS_UAT_APP_CLIENT_ID) server=https://uat.openchs.org port=443 username=admin password=$(password)
-
-deploy_platform_translations_uat:
-	make deploy_translations poolId=$(OPENCHS_UAT_USER_POOL_ID) clientId=$(OPENCHS_UAT_APP_CLIENT_ID) server=https://uat.openchs.org port=443 username=admin password=$(password)
 
 deploy_metadata_staging_local:
 	make deploy poolId=$(OPENCHS_STAGING_USER_POOL_ID) clientId=$(OPENCHS_STAGING_APP_CLIENT_ID) server=http://localhost port=8021 username=admin password=$(password)
@@ -193,14 +170,8 @@ deploy_metadata_staging_local:
 deploy_metadata_live:
 	make deploy poolId=$(OPENCHS_PROD_USER_POOL_ID) clientId=$(OPENCHS_PROD_APP_CLIENT_ID) server=https://server.openchs.org port=443 username=admin password=$(password)
 
-deploy_platform_translations_live:
-	make deploy_translations poolId=$(OPENCHS_PROD_USER_POOL_ID) clientId=$(OPENCHS_PROD_APP_CLIENT_ID) server=https://server.openchs.org port=443 username=admin password=$(password)
-
 deploy_metadata_prerelease:
 	make deploy poolId=$(OPENCHS_PRERELEASE_USER_POOL_ID) clientId=$(OPENCHS_PRERELEASE_APP_CLIENT_ID) server=https://prerelease.openchs.org port=443 username=admin password=$(password)
-
-deploy_platform_translations_prerelease:
-	make deploy_translations poolId=$(OPENCHS_PRERELEASE_USER_POOL_ID) clientId=$(OPENCHS_PRERELEASE_APP_CLIENT_ID) server=https://prerelease.openchs.org port=443 username=admin password=$(password)
 
 deploy_referral_concepts_fix_prod:
 	make deploy_referral_concepts_fix poolId=$(OPENCHS_PROD_USER_POOL_ID) clientId=$(OPENCHS_PROD_APP_CLIENT_ID) server=https://server.openchs.org port=443 username=admin password=$(password)
