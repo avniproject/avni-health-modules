@@ -489,14 +489,14 @@ describe('High Risk Pregnancy Determination', () => {
         it("Shouldn't mark high risk if height is not specified", () => {
             const decisions = motherEnrolmentDecision.getDecisions(enrolment, referenceDate).enrolmentDecisions;
             const complicationValues = TestHelper.findCodedValue(decisions, "High Risk Conditions");
-            expect(complicationValues).to.be.empty;
+            expect(complicationValues).to.be.an('array').that.includes('Old age pregnancy');
         });
 
         it("Shouldn't mark high risk if height is above 145cms", () => {
             enrolment.setObservation(height.name, 151);
             const decisions = motherEnrolmentDecision.getDecisions(enrolment, referenceDate).enrolmentDecisions;
             const complicationValues = TestHelper.findCodedValue(decisions, "High Risk Conditions");
-            expect(complicationValues).to.be.empty;
+            expect(complicationValues).to.be.an('array').that.includes('Old age pregnancy');
         });
 
         it("Should mark high risk if height is equal to 145cms", () => {

@@ -6835,9 +6835,9 @@ rsvp@^4.8.4:
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
 
-"rules-config@github:openchs/rules-config#3c6ceb7d49a1ddb7dada099ab60c1b8e824ed7f3":
+"rules-config@github:openchs/rules-config#8206c29f7cc5cd2710dfa783ea28b283941ac306":
   version "0.0.1"
-  resolved "https://codeload.github.com/openchs/rules-config/tar.gz/3c6ceb7d49a1ddb7dada099ab60c1b8e824ed7f3"
+  resolved "https://codeload.github.com/openchs/rules-config/tar.gz/8206c29f7cc5cd2710dfa783ea28b283941ac306"
   dependencies:
     babel-cli "^6.26.0"
     babel-loader "^7.1.4"
