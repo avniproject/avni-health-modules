@@ -32,7 +32,7 @@
   "dependencies": {
     "lodash": "4.17.11",
     "moment": "2.19.3",
-    "rules-config": "github:openchs/rules-config#8206c29f7cc5cd2710dfa783ea28b283941ac306"
+    "rules-config": "github:openchs/rules-config#75addcb054843b76246b1c0ad884112da31e83d5"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
