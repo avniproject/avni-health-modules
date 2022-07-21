@@ -7784,9 +7784,9 @@ rsvp@^4.8.4:
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
 
-"rules-config@github:openchs/rules-config#600c1ad52b693af7dc826ca33d58257bc3bc9d39":
+"rules-config@github:avniproject/rules-config#600c1ad52b693af7dc826ca33d58257bc3bc9d39":
   version "0.0.1"
-  resolved "https://codeload.github.com/openchs/rules-config/tar.gz/600c1ad52b693af7dc826ca33d58257bc3bc9d39"
+  resolved "https://codeload.github.com/avniproject/rules-config/tar.gz/600c1ad52b693af7dc826ca33d58257bc3bc9d39"
   dependencies:
     "@quasar/babel-preset-app" "^2.0.1"
     babel-preset-env "^1.7.0"
