@@ -13,7 +13,12 @@ help:
 	done
 # </makefile>
 
-# General Makfile start ===========
+define _deploy
+	rm -rf $1/*
+	mkdir $1/dist
+	cp -r dist/* $1/dist/
+	cp ./* $1/
+endef
 
 check-node-v:
 ifneq ($(shell node -v),$(shell cat .nvmrc))
@@ -42,3 +47,10 @@ release:
 
 publish:
 	git push && git push origin --tags
+
+deploy_local:
+ifeq ($(local),)
+	@echo -e '\nPlease provide the local location of node modules where to install. e.g. local=../avni-web-app/ or local=../avni-client/packages/openchs-android \n'
+	@exit 1
+endif
+	$(call _deploy,$(local)/node_modules/avni-health-modules/dist)

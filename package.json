@@ -37,6 +37,7 @@
     "rules-config": "*"
   },
   "devDependencies": {
+    "rules-config": "github:avniproject/rules-config#600c1ad52b693af7dc826ca33d58257bc3bc9d39",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
