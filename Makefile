@@ -48,7 +48,7 @@ release:
 publish:
 	git push && git push origin --tags
 
-deploy_local:
+deploy-local:
 ifeq ($(local),)
 	@echo -e '\nPlease provide the local location of node modules where to install. e.g. local=../avni-web-app/ or local=../avni-client/packages/openchs-android \n'
 	@exit 1
