@@ -1,6 +1,6 @@
 {
   "name": "avni-health-modules",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "private": false,
   "repository": {
     "type": "git",
@@ -34,8 +34,8 @@
     "moment": "2.19.3"
   },
   "peerDependencies": {
-    "rules-config": "*",
-    "openchs-models": "*"
+    "openchs-models": "*",
+    "rules-config": "*"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
