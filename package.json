@@ -34,7 +34,8 @@
     "moment": "2.19.3"
   },
   "peerDependencies": {
-    "rules-config": "*"
+    "rules-config": "*",
+    "openchs-models": "*"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
