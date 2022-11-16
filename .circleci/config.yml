@@ -20,7 +20,7 @@ jobs:
 
       - run: make build
 
-      - run: make test
+      - run: make tests
 
       - save_cache:
           paths:

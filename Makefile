@@ -20,23 +20,19 @@ define _deploy
 	cp ./* $1/
 endef
 
-check-node-v:
-ifneq ($(shell node -v),$(shell cat .nvmrc))
-	@echo '\nPlease run `nvm use` in your terminal to change node version\n'
-	@exit 1
-endif
-	@node -v
+set_node_version:
+	. ${NVM_DIR}/nvm.sh && nvm use
 
 clean:
 	rm -rf node_modules
 
-deps:
+deps: set_node_version
 	yarn install
 
-build:
+build: set_node_version
 	yarn run build
 
-test:
+tests: set_node_version build
 	yarn test
 
 release:
