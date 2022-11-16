@@ -16,11 +16,7 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
 
-      - run: make deps
-
-      - run: make build
-
-      - run: make tests
+      - run: make ci-build
 
       - save_cache:
           paths:

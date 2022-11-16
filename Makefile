@@ -35,6 +35,11 @@ build: set_node_version
 tests: set_node_version build
 	yarn test
 
+ci-build:
+	yarn install
+	yarn run build
+	yarn test
+
 release:
 	git pull --tags
 	git pull --rebase
