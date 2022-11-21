@@ -29,6 +29,9 @@ clean:
 deps: set_node_version
 	yarn install
 
+check-project-versions:
+	npm search openchs-models
+
 build: set_node_version
 	yarn run build
 

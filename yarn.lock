@@ -4070,10 +4070,10 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-openchs-models@1.27.8:
-  version "1.27.8"
-  resolved "https://registry.yarnpkg.com/openchs-models/-/openchs-models-1.27.8.tgz#b2f4c8d4126b2a6ecd91c577d0e18f01afec2c24"
-  integrity sha512-ka05JKvaHSZZbF5Iuxl5OcuLmTurlVviwN9J2hIZdNKjL8KqAvs4GpRMtf0VgvUGofKVDiAlNT3d+jEm/UxBww==
+openchs-models@latest:
+  version "1.27.9"
+  resolved "https://registry.yarnpkg.com/openchs-models/-/openchs-models-1.27.9.tgz#4d874c9aff2d5f374607560a694dec46762636e5"
+  integrity sha512-qW4ikPnjwZCmPBslTCHrUVfkYbz3z36Bc0L4qbuPp7XIbb/wTaNZJZjKLxZFMBUwNK7v9JtiEjLh740V6JMOQA==
 
 optionator@^0.8.1:
   version "0.8.3"
@@ -4537,6 +4537,20 @@ rsvp@^4.8.4:
 "rules-config@github:openchs/rules-config#a35ade353300f8dde3a20af4234b49036e2fda16":
   version "0.0.1"
   resolved "https://codeload.github.com/openchs/rules-config/tar.gz/a35ade353300f8dde3a20af4234b49036e2fda16"
+  dependencies:
+    "@quasar/babel-preset-app" "^2.0.1"
+    babel-preset-env "^1.7.0"
+    babel-register "^6.26.0"
+    chai "^4.1.2"
+    lodash "^4.17.11"
+    moment "^2.22.2"
+    openchs-models "^0.2.25"
+    superagent "^3.8.3"
+    test "^0.6.0"
+    uglifyjs-webpack-plugin "^1.2.5"
+    webpack "^3.12.0"
+    webpack-cli "^3.0.3"
+    webpack-node-externals "1.6.0"
 
 safe-regex@^1.1.0:
   version "1.1.0"

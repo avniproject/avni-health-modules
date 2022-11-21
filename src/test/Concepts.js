@@ -15,7 +15,7 @@ const MotherPNCForm = require('../health_modules/mother/metadata/motherPNCForm.j
 const MotherProgramEnrolmentForm = require('../health_modules/mother/metadata/motherProgramEnrolmentForm.json');
 const MotherProgramExitForm = require('../health_modules/mother/metadata/motherProgramExitForm.json');
 const OPDEncounterForm = require('../health_modules/outpatient/metadata/encounterForm.json');
-import {Concept} from "avni-models";
+import {Concept, ConceptAnswer} from "openchs-models";
 
 
 const IMPORTED_CONCEPTS = _([CommonConcepts, ChildConcepts, MotherConcepts, OPDConcepts])
@@ -32,9 +32,30 @@ let concepts = _.mapValues(_.groupBy(IMPORTED_CONCEPTS.concat(FORM_CONCEPTS), 'n
 module.exports = concepts;
 
 module.exports.findConcept = function (conceptName) {
-    let conceptData = _.find(concepts, (concept) => concept.name === conceptName);
-    let concept = _.isNil(conceptData.concept) ? conceptData : conceptData.concept;
-    return _.assignIn(new Concept(), concept);
+    const conceptData = _.find(concepts, (concept) => concept.name === conceptName);
+    const concept = _.isNil(conceptData.concept) ? conceptData : conceptData.concept;
+    const c = new Concept();
+    c.uuid = concept.uuid;
+    c.name = concept.name;
+    c.datatype = concept.datatype;
+    c.keyValues = concept.keyValues;
+    c.hiAbsolute = concept.hiAbsolute;
+    c.hiNormal = concept.hiNormal;
+    c.lowAbsolute = concept.lowAbsolute;
+    c.lowNormal = concept.lowNormal;
+    c.unit = concept.unit;
+    c.voided = concept.voided;
+    c.answers = [];
+    concept.answers.forEach((ca) => {
+        if (_.isNil(ca)) return null;
+        const conceptAnswer = new ConceptAnswer();
+        conceptAnswer.uuid = ca.uuid;
+        conceptAnswer.concept = c;
+        conceptAnswer.abnormal = ca.abnormal;
+        conceptAnswer.answerOrder = ca.answerOrder;
+        c.answers.push(ca);
+    })
+    return c;
 };
 
 let findConcept = function (conceptName) {
