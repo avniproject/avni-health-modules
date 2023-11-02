@@ -10,6 +10,15 @@ class TestHelper {
         }
         return values;
     };
+
+    static checkForInvalidDate = function (dateValue) {
+        try {
+            C.isInvalidDate(dateValue);
+            return false
+        } catch (e) {
+            return true;
+        }
+    };
 }
 
 export default TestHelper;

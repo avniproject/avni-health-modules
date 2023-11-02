@@ -23,6 +23,7 @@ function C() {
     };
 
     this.copyDate = function (date) {
+        this.isInvalidDate(date);
         return new Date(date.getTime());
     };
 
@@ -61,6 +62,8 @@ function C() {
     };
 
     this.getDays = function (firstDate, secondDate) {
+        this.isInvalidDate(firstDate);
+        this.isInvalidDate(secondDate);
         var oneDay = 24 * 60 * 60 * 1000;
         return (Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay))));
     };
@@ -146,6 +149,12 @@ function C() {
 
     this.weeksBetween = (arg1, arg2) => {
         return moment.duration(moment(arg1).diff(moment(arg2))).asWeeks();
+    }
+
+    this.isInvalidDate = (date) => {
+        if(!date || !moment(date).isValid()) {
+            throw new Error(String.format("Invalid date value %s specified", date));
+        }
     }
 }
 
