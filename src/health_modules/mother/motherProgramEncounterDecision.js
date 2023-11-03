@@ -13,7 +13,13 @@ import generateTreatment from "./treatment";
 import {immediateReferralAdvice, referralAdvice} from "./referral";
 import generateInvestigationAdvice from "./investigations";
 import generateHighRiskConditionAdvice, {getHighRiskConditionsInDeliveryEncounter} from "./highRisk";
-import {gestationalAgeCategoryAsOn, eddBasedOnGestationalAge, gestationalAgeForEDD} from "./calculations";
+import {
+    gestationalAgeCategoryAsOn,
+    eddBasedOnGestationalAge,
+    gestationalAgeForEDD,
+    dateOfDelivery,
+    dateOfDeliveryConceptName
+} from "./calculations";
 import {FormElementsStatusHelper} from "rules-config/rules";
 
 const ANCFormDecision = RuleFactory("3a95e9b0-731a-4714-ae7c-10e1d03cebfe", "Decision");
@@ -131,10 +137,12 @@ export function getDecisions(programEncounter, today) {
 
     if (programEncounter.encounterType.name === "Delivery") {
         let decisions = {enrolmentDecisions: [], encounterDecisions: [], registrationDecisions: []};
+        const deliveryDate = dateOfDelivery(programEncounter);
+        C.checkIfDateIsInvalid(deliveryDate, dateOfDeliveryConceptName);
         decisions.encounterDecisions.push(
             {
                 name: 'Gestational age category at birth',
-                value: [gestationalAgeCategoryAsOn(programEncounter.findObservation("Date of delivery").getValue(), programEncounter.programEnrolment)]
+                value: [gestationalAgeCategoryAsOn(deliveryDate, programEncounter.programEnrolment)]
             }
         );
         decisions.encounterDecisions.push(getHighRiskConditionsInDeliveryEncounter(programEncounter.programEnrolment, programEncounter));

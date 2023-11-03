@@ -13,9 +13,10 @@ class TestHelper {
 
     static checkForInvalidDate = function (dateValue) {
         try {
-            C.isInvalidDate(dateValue);
+            C.checkIfDateIsInvalid(dateValue, 'testDateFieldConceptName');
             return false
         } catch (e) {
+            // console.log(e);
             return true;
         }
     };

@@ -2,14 +2,21 @@ import {common as C} from "../common";
 import _ from "lodash";
 import moment from 'moment';
 
+const lastMenstrualPeriodConceptName = 'Last menstrual period';
+const dateOfDeliveryConceptName = "Date of delivery";
 const lmp = (programEnrolment) => {
-    return programEnrolment.getObservationValue('Last menstrual period');
+    return programEnrolment.getObservationValue(lastMenstrualPeriodConceptName);
 };
+const dateOfDelivery = (programEncounter) => {
+    return programEncounter.getObservationValue(dateOfDeliveryConceptName);
+}
 
 //TODO: if possible merge 'gestationalAge' and 'gestationalAgeAsOn'
 const gestationalAge = (enrolment, toDate = new Date()) => C.weeksBetween(toDate, lmp(enrolment));
 const gestationalAgeAsOn = (date, programEnrolment) => {
-    let daysFromLMP = C.getDays(lmp(programEnrolment), date);
+    const lmpDate = lmp(programEnrolment);
+    C.checkIfDateIsInvalid(lmpDate, lastMenstrualPeriodConceptName);
+    let daysFromLMP = C.getDays(lmpDate, date);
     return _.floor(daysFromLMP / 7, 0);
 };
 
@@ -116,6 +123,10 @@ const getOldestObsBeforeCurrentEncounter = (currentEncounter, conceptName) => {
 };
 
 export {
+    dateOfDeliveryConceptName,
+    lastMenstrualPeriodConceptName,
+    lmp,
+    dateOfDelivery,
     gestationalAgeAsOn,
     gestationalAgeCategoryAsOn,
     estimatedDateOfDelivery,

@@ -1,6 +1,6 @@
 import C from '../common';
 import _ from "lodash";
-import {gestationalAgeAsOfToday} from './calculations';
+import {lastMenstrualPeriodConceptName, lmp, gestationalAgeAsOfToday} from './calculations';
 import {complicationsBuilder as ComplicationsBuilder} from "rules-config/rules";
 import {getNextScheduledVisits} from './motherVisitSchedule';
 
@@ -110,9 +110,10 @@ const medicalHistoryBasedComplications = (programEnrolment, today, programEncoun
     return complicationsBuilder.getComplications();
 };
 
-const getEnrolmentSummary = function (programEnrolment, context, today) {
+const getEnrolmentSummary = function (programEnrolment, context, today = new Date()) {
     let summary = [];
-    const lmpDate = programEnrolment.getObservationValue('Last menstrual period');
+    const lmpDate = lmp(programEnrolment);
+    C.checkIfDateIsInvalid(lmpDate, lastMenstrualPeriodConceptName);
     let daysFromLMP = C.getDays(lmpDate, today);
     let estimatedGestationalAgeWithDate = programEnrolment.findObservationValueInEntireEnrolment('Gestational age', false);
     let gestationalAge;
@@ -126,7 +127,7 @@ const getEnrolmentSummary = function (programEnrolment, context, today) {
     const isPostDelivery = programEnrolment.hasAnyOfEncounterTypes(postDeliveryEncounterTypes);
 
     if (!isPostDelivery) {
-        summary.push({name: 'Last menstrual period', value: lmpDate});
+        summary.push({name: lastMenstrualPeriodConceptName, value: lmpDate});
         summary.push({name: 'Current gestational age', value: gestationalAge, abnormal: gestationalAge > 42});
         summary.push({
             name: 'Estimated Date of Delivery',
