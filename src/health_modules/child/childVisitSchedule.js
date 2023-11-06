@@ -13,6 +13,7 @@ var getNextScheduledVisits = function (programEnrolment) {
     var encounters = programEnrolment.getEncounters(true);
 
     let dateOfBirth = programEnrolment.individual.dateOfBirth;
+    C.checkIfDateIsInvalid(dateOfBirth, 'individual.dateOfBirth');
 
     if (C.encounterExists(encounters, 'PNC', 'PNC 4')) return null;
     if (C.encounterExists(encounters, 'PNC', 'PNC 3')) return createNextVisit(dateOfBirth, 'PNC 4');

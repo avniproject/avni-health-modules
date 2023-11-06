@@ -1,10 +1,11 @@
 import C from '../common';
 import _ from 'lodash';
+import {lastMenstrualPeriodConceptName, lmp} from './calculations';
 
 export function getVaccSchedule (programEnrolment) {
     const checklistItems = [];
-    const lmpDate = programEnrolment.getObservationValue('Last menstrual period');
-
+    const lmpDate = lmp(programEnrolment);
+    C.checkIfDateIsInvalid(lmpDate, lastMenstrualPeriodConceptName);
     if (ttTakenAlreadyInPreviousPregnancy()) {
         var oneMonthBeforeDelivery = C.addDays(lmpDate, 280 - 30);
         checklistItems.push(C.addChecklistItem(lmpDate, "TT Booster", oneMonthBeforeDelivery, oneMonthBeforeDelivery));

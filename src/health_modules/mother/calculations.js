@@ -28,7 +28,9 @@ const gestationalAgeCategoryAsOn = (date, programEnrolment) => {
 };
 
 const estimatedDateOfDelivery = (programEnrolment) => {
-    return C.addDays(C.addMonths(lmp(programEnrolment), 9), 7);
+    const lmpDate = lmp(programEnrolment);
+    C.checkIfDateIsInvalid(lmpDate, lastMenstrualPeriodConceptName);
+    return C.addDays(C.addMonths(lmpDate, 9), 7);
 };
 
 const gestationalAgeAsOfToday = (estimatedGestationalAgeInWeeks, estimatedOnDate, today) => {

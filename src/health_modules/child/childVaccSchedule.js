@@ -12,6 +12,7 @@ const makeState = (name, from, to, unit, color) => {
 var getVaccScheduleOld = function (programEnrolment) {
     const vaccScheduleItems = [];
     const dateOfBirth = programEnrolment.individual.dateOfBirth;
+    C.checkIfDateIsInvalid(dateOfBirth, 'individual.dateOfBirth');
 
     //at birth
     vaccScheduleItems.push(C.addChecklistItem(dateOfBirth, "BCG", 0, 15));
