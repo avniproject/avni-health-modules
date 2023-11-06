@@ -1,4 +1,4 @@
-import _, {common as C} from '../common';
+import _ from '../common';
 
 //in days
 const encounterSchedule = {
@@ -39,7 +39,7 @@ const getNextScheduledVisits = function (programEnrolment, today, currentEncount
     }
 
     if (deliveryDate) {
-    C.checkIfDateIsInvalid(deliveryDate, 'deliveryEncounter.encounterDateTime');
+    _.checkIfDateIsInvalid(deliveryDate, 'deliveryEncounter.encounterDateTime');
         addEncounter(deliveryDate, 'PNC', 'PNC 1');
         addEncounter(deliveryDate, 'PNC', 'PNC 2');
         addEncounter(deliveryDate, 'PNC', 'PNC 3');
