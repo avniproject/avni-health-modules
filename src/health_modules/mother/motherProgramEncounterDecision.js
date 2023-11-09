@@ -138,7 +138,6 @@ export function getDecisions(programEncounter, today) {
     if (programEncounter.encounterType.name === "Delivery") {
         let decisions = {enrolmentDecisions: [], encounterDecisions: [], registrationDecisions: []};
         const deliveryDate = dateOfDelivery(programEncounter);
-        C.checkIfDateIsInvalid(deliveryDate, dateOfDeliveryConceptName);
         decisions.encounterDecisions.push(
             {
                 name: 'Gestational age category at birth',

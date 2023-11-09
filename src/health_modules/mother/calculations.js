@@ -4,18 +4,26 @@ import moment from 'moment';
 
 const lastMenstrualPeriodConceptName = 'Last menstrual period';
 const dateOfDeliveryConceptName = "Date of delivery";
-const lmp = (programEnrolment) => {
-    return programEnrolment.getObservationValue(lastMenstrualPeriodConceptName);
+const lmp = (programEnrolment, errIfLmpIsNotSet = false) => {
+    const lmpDate = programEnrolment.getObservationValue(lastMenstrualPeriodConceptName);
+    errIfLmpIsNotSet && C.checkIfDateIsInvalid(lmpDate, lastMenstrualPeriodConceptName, 'programEnrolment', programEnrolment.uuid);
+    return lmpDate;
 };
 const dateOfDelivery = (programEncounter) => {
-    return programEncounter.getObservationValue(dateOfDeliveryConceptName);
+    const deliveryDate = programEncounter.getObservationValue(dateOfDeliveryConceptName);
+    C.checkIfDateIsInvalid(deliveryDate, dateOfDeliveryConceptName, 'programEncounter', programEncounter.uuid);
+    return deliveryDate;
+}
+const dateOfBirth = (individual) => {
+    const birthDate = individual.dateOfBirth;
+    C.checkIfDateIsInvalid(birthDate, 'dateOfBirth', 'individual', individual.uuid);
+    return birthDate;
 }
 
 //TODO: if possible merge 'gestationalAge' and 'gestationalAgeAsOn'
-const gestationalAge = (enrolment, toDate = new Date()) => C.weeksBetween(toDate, lmp(enrolment));
+const gestationalAge = (enrolment, toDate = new Date()) => C.weeksBetween(toDate, lmp(enrolment, true));
 const gestationalAgeAsOn = (date, programEnrolment) => {
-    const lmpDate = lmp(programEnrolment);
-    C.checkIfDateIsInvalid(lmpDate, lastMenstrualPeriodConceptName);
+    const lmpDate = lmp(programEnrolment, true);
     let daysFromLMP = C.getDays(lmpDate, date);
     return _.floor(daysFromLMP / 7, 0);
 };
@@ -28,8 +36,7 @@ const gestationalAgeCategoryAsOn = (date, programEnrolment) => {
 };
 
 const estimatedDateOfDelivery = (programEnrolment) => {
-    const lmpDate = lmp(programEnrolment);
-    C.checkIfDateIsInvalid(lmpDate, lastMenstrualPeriodConceptName);
+    const lmpDate = lmp(programEnrolment, true);
     return C.addDays(C.addMonths(lmpDate, 9), 7);
 };
 
@@ -129,6 +136,7 @@ export {
     lastMenstrualPeriodConceptName,
     lmp,
     dateOfDelivery,
+    dateOfBirth,
     gestationalAgeAsOn,
     gestationalAgeCategoryAsOn,
     estimatedDateOfDelivery,

@@ -1,4 +1,6 @@
 import C from '../common';
+import {dateOfBirth as dob} from '../mother/calculations';
+
 
 const makeState = (name, from, to, unit, color) => {
     const states = {
@@ -11,8 +13,7 @@ const makeState = (name, from, to, unit, color) => {
 
 var getVaccScheduleOld = function (programEnrolment) {
     const vaccScheduleItems = [];
-    const dateOfBirth = programEnrolment.individual.dateOfBirth;
-    C.checkIfDateIsInvalid(dateOfBirth, 'individual.dateOfBirth');
+    const dateOfBirth = dob(programEnrolment.individual);
 
     //at birth
     vaccScheduleItems.push(C.addChecklistItem(dateOfBirth, "BCG", 0, 15));

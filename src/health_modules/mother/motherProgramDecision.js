@@ -112,8 +112,7 @@ const medicalHistoryBasedComplications = (programEnrolment, today, programEncoun
 
 const getEnrolmentSummary = function (programEnrolment, context, today = new Date()) {
     let summary = [];
-    const lmpDate = lmp(programEnrolment);
-    C.checkIfDateIsInvalid(lmpDate, lastMenstrualPeriodConceptName);
+    const lmpDate = lmp(programEnrolment, true);
     let daysFromLMP = C.getDays(lmpDate, today);
     let estimatedGestationalAgeWithDate = programEnrolment.findObservationValueInEntireEnrolment('Gestational age', false);
     let gestationalAge;

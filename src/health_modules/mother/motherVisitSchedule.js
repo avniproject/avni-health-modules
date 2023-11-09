@@ -39,7 +39,7 @@ const getNextScheduledVisits = function (programEnrolment, today, currentEncount
     }
 
     if (deliveryDate) {
-        _.checkIfDateIsInvalid(deliveryDate, 'deliveryEncounter.encounterDateTime');
+        _.checkIfDateIsInvalid(deliveryDate, 'deliveryEncounter.encounterDateTime', 'programEncounter', deliveryEncounter.uuid);
         addEncounter(deliveryDate, 'PNC', 'PNC 1');
         addEncounter(deliveryDate, 'PNC', 'PNC 2');
         addEncounter(deliveryDate, 'PNC', 'PNC 3');

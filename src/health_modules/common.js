@@ -149,9 +149,9 @@ function C() {
         return moment.duration(moment(arg1).diff(moment(arg2))).asWeeks();
     }
 
-    this.checkIfDateIsInvalid = (date, fieldName = '') => {
+    this.checkIfDateIsInvalid = (date, fieldName = '', entity= '', entityUUID= '') => {
         if (!(date && moment(date).isValid())) {
-            throw new Error(`Invalid date value \'${date}\' specified for mandatory concept \'${fieldName}\'`);
+            throw new Error(`Invalid date value \'${date}\' specified for mandatory concept \'${fieldName}\' for entity \'${entity}\' with uuid \'${entityUUID}\'`);
         }
     }
 }

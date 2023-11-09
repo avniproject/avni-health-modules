@@ -37,9 +37,11 @@ describe("Mother Program ANC", () => {
             .withGender("Female")
             .withSingleCodedObservation("Blood group", "B+")
             .build();
+        const lmp = moment().subtract(25, "w").toDate();
         enrolment = new EnrolmentFiller(programData, individual, new Date())
-            .build();
-        decisions = {encounterDecisions: [], encounterDecisions: []};
+          .forConcept("Last menstrual period", lmp)
+          .build();
+        decisions = {encounterDecisions: []};
     });
 
     describe("Institutional Delivery and ANC", () => {
@@ -51,10 +53,11 @@ describe("Mother Program ANC", () => {
             assert.notInclude(TestHelper.findCodedValue(decisions.encounterDecisions, "Recommendations"), "Institutional Delivery");
             assert.notInclude(TestHelper.findCodedValue(decisions.encounterDecisions, "Recommendations"), "Institutional ANC");
 
+            const lmp = moment().subtract(25, "w").toDate();
             enrolment = new EnrolmentFiller(programData, individual, new Date())
                 .forMultiCoded("Recommendations", ["Institutional Delivery", "Institutional ANC"])
+                .forConcept("Last menstrual period", lmp)
                 .build();
-
             ancEncounter = new EncounterFiller(programData, enrolment, "ANC", new Date())
                 .forConcept("Systolic", 89)
                 .build();
