@@ -35,7 +35,7 @@ const getHfaReference = (gender, ageInMonths) => {
 
 function calc_sd(reference, sd) {
     const {L, M, S} = reference;
-    return M * ((1 + L * S * sd) ^ (1 / L));
+    return M * Math.pow(1 + (L * S * sd), (1 / L));
 }
 
 function roundToOneDecimal(value) {
@@ -58,7 +58,7 @@ const calculate = (value, reference) => {
     const sd3pos = calc_sd(reference, 3);
     const sd3neg = calc_sd(reference, -3);
     const sd23pos = sd3pos - calc_sd(reference, 2);
-    const sd23neg = calc_sd(reference, 2) - sd3neg;
+    const sd23neg = calc_sd(reference, -2) - sd3neg;
 
     let zScore = roundToOneDecimal((Math.pow(value / reference.M, reference.L) - 1) / (reference.S * reference.L));
 

@@ -25,40 +25,31 @@ describe("zScoreCalculator", () => {
         });
 
         it("calculates weight for age z-scores for boys and girls between 0 and 5", () => {
-            let zScores, today = new Date();
+            const today = new Date();
             individual.dateOfBirth = moment(today).subtract(1, 'month');
 
-            zScores = zScore(individual, today, 1.2, 54.7);
-            assert.equal(zScores.wfa, -6.7);
+            // check for numbers outside -4 and 4
+            assert.equal(zScore(individual, today, 1.2).wfa, -6.8);
+            assert.equal(zScore(individual, today, 4.5).wfa, 0);
+            assert.equal(zScore(individual, today, 5.1).wfa, 1);
 
-            zScores = zScore(individual, today, 4.5, 54.7);
-            assert.equal(zScores.wfa, 0);
+            individual.dateOfBirth = moment(today).subtract(26, 'month');
+            assert.equal(zScore(individual, today, 7.0).wfa, -4.7);
 
-            zScores = zScore(individual, today, 5.1, 54.7);
-            assert.equal(zScores.wfa, 1);
+            individual.dateOfBirth = moment(today).subtract(26, 'month');
+            assert.equal(zScore(individual, today, 6.3).wfa, -5.4);
 
             individual.gender = female;
 
-            //Notice this calculation may not exactly match the zscores as provided in the reference
-            zScores = zScore(individual, today, 2.7, 54.7);
-            assert.equal(zScores.wfa, -3.1);
+            individual.dateOfBirth = moment(today).subtract(1, 'month');
+            assert.equal(zScore(individual, today, 2.7).wfa, -3.1);
 
             //Notice this calculation may not exactly match the zscores as provided in the reference
-            zScores = zScore(individual, today, 3.2, 54.7);
-            assert.equal(zScores.wfa, -1.9);
-
-            zScores = zScore(individual, today, 4.2, 54.7);
-            assert.equal(zScores.wfa, 0);
-
-            zScores = zScore(individual, today, 4.8, 54.7);
-            assert.equal(zScores.wfa, 1);
-
-            zScores = zScore(individual, today, 5.5, 54.7);
-            assert.equal(zScores.wfa, 2);
-
-            zScores = zScore(individual, today, 6.2, 54.7);
-            assert.equal(zScores.wfa, 3);
-
+            assert.equal(zScore(individual, today, 3.2).wfa, -1.9);
+            assert.equal(zScore(individual, today, 4.2).wfa, 0);
+            assert.equal(zScore(individual, today, 4.8).wfa, 1);
+            assert.equal(zScore(individual, today, 5.5).wfa, 2);
+            assert.equal(zScore(individual, today, 6.2).wfa, 3);
 
             //2 year old girl
             individual.dateOfBirth = moment(today).subtract(24, 'month');
