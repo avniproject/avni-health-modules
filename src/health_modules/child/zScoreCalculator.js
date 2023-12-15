@@ -14,8 +14,8 @@ const anthropometricReference = {
     wfh: {Male: wfh_boys, Female: wfh_girls}
 };
 
-const roundedHeight = (num) =>{
-    return Math.round(num*2)/2;
+const roundedHeight = (num) => {
+    return Math.round(num * 2) / 2;
 };
 
 const getWfaReference = (gender, ageInMonths) => {
@@ -25,12 +25,21 @@ const getWfaReference = (gender, ageInMonths) => {
 
 const getWfhReference = (gender, height) => {
     let wfhReference = _.get(anthropometricReference, ["wfh", gender]);
-    return _.find(wfhReference,(item) => item.x === roundedHeight(height));
+    return _.find(wfhReference, (item) => item.x === roundedHeight(height));
 }
 
 const getHfaReference = (gender, ageInMonths) => {
     let heightForAgeReference = _.get(anthropometricReference, ["hfa", gender]);
     return _.find(heightForAgeReference, (item) => item.Month === ageInMonths);
+}
+
+function calc_sd(reference, sd) {
+    const {L, M, S} = reference;
+    return M * ((1 + L * S * sd) ^ (1 / L));
+}
+
+function roundToOneDecimal(value) {
+    return Math.round(10 * value) / 10;
 }
 
 /**
@@ -45,7 +54,20 @@ const getHfaReference = (gender, ageInMonths) => {
 const calculate = (value, reference) => {
     if (!value || value === 0 || !reference) return undefined;
 
-   return Math.round(10 * (Math.pow(value / reference.M, reference.L) - 1) / (reference.S * reference.L)) / 10;
+    // https://github.com/WorldHealthOrganization/anthro/blob/master/R/z-score-helper.R#L28
+    const sd3pos = calc_sd(reference, 3);
+    const sd3neg = calc_sd(reference, -3);
+    const sd23pos = sd3pos - calc_sd(reference, 2);
+    const sd23neg = calc_sd(reference, 2) - sd3neg;
+
+    let zScore = roundToOneDecimal((Math.pow(value / reference.M, reference.L) - 1) / (reference.S * reference.L));
+
+    if (Math.round(zScore) > 3)
+        zScore = roundToOneDecimal(3 + ((value - sd3pos) / sd23pos));
+    else if (Math.round(zScore) < -3)
+        zScore = roundToOneDecimal(-3 + ((value - sd3neg) / sd23neg));
+
+    return zScore;
 };
 
 const calculateZScore = (gender, ageInMonths, weight, height) => {
@@ -53,8 +75,6 @@ const calculateZScore = (gender, ageInMonths, weight, height) => {
     let hfaReference = getHfaReference(gender, ageInMonths);
     let wfhReference = getWfhReference(gender, height);
 
-    //console.log(`weight ${weight} wfa ${JSON.stringify(wfaReference)}`);
-    
     return {
         wfa: calculate(weight, wfaReference),
         hfa: calculate(height, hfaReference),
@@ -65,8 +85,6 @@ const calculateZScore = (gender, ageInMonths, weight, height) => {
 const zScore = (individual, asOnDate, weight, height) => {
     let ageInMonths = individual.getAgeInMonths(asOnDate);
     let gender = _.get(individual, "gender.name");
-
-    //console.log(`ageInMonths ${ageInMonths} gender ${gender}`);
 
     return calculateZScore(gender, ageInMonths, weight, height);
 };

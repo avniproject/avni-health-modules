@@ -5,7 +5,7 @@ import moment from "moment";
 
 describe("zScoreCalculator", () => {
     describe("zScore()", () => {
-        var individual, male, female;
+        let individual, male, female;
 
         beforeEach(() => {
             male = new Gender();
@@ -27,6 +27,9 @@ describe("zScoreCalculator", () => {
         it("calculates weight for age z-scores for boys and girls between 0 and 5", () => {
             let zScores, today = new Date();
             individual.dateOfBirth = moment(today).subtract(1, 'month');
+
+            zScores = zScore(individual, today, 1.2, 54.7);
+            assert.equal(zScores.wfa, -6.7);
 
             zScores = zScore(individual, today, 4.5, 54.7);
             assert.equal(zScores.wfa, 0);
@@ -60,7 +63,7 @@ describe("zScoreCalculator", () => {
             //2 year old girl
             individual.dateOfBirth = moment(today).subtract(24, 'month');
 
-            assert.equal(zScore(individual, today, 8.1, ).wfa, -3);
+            assert.equal(zScore(individual, today, 8.1,).wfa, -3);
             assert.equal(zScore(individual, today, 9).wfa, -2);
             assert.equal(zScore(individual, today, 10.2).wfa, -1);
             assert.equal(zScore(individual, today, 11.5).wfa, 0);
