@@ -39,7 +39,7 @@ function calc_sd(reference, sd) {
 }
 
 function roundToOneDecimal(value) {
-    return Math.round(10 * value) / 10;
+    return Math.round(100 * value) / 100;
 }
 
 /**

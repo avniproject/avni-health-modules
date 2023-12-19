@@ -47,9 +47,9 @@ describe("Anthropometric Decisions", () => {
         programEncounter.observations.push(heightObs);
 
         let decisions = getDecisions(programEncounter).encounterDecisions;
-        assert.equal(C.findValue(decisions, "Weight for age z-score"), -0.1);
-        assert.equal(C.findValue(decisions, "Height for age z-score"), 0);
-        assert.equal(C.findValue(decisions, "Weight for height z-score"), 0.2);
+        assert.equal(C.findValue(decisions, "Weight for age z-score"), -0.07);
+        assert.equal(C.findValue(decisions, "Height for age z-score"), -0.03);
+        assert.equal(C.findValue(decisions, "Weight for height z-score"), 0.15);
     });
 
     it("calculates growth faltering status", () => {
@@ -121,7 +121,7 @@ describe("Anthropometric Decisions", () => {
 
         let decisions = getDecisions(programEncounter).encounterDecisions;
         assert.isNull(C.findValue(decisions, "Weight for age z-score"));
-        assert.equal(C.findValue(decisions, "Height for age z-score"), 0);
+        assert.equal(C.findValue(decisions, "Height for age z-score"), -0.03);
         assert.isNull(C.findValue(decisions, "Weight for height z-score"));
     });
 });
