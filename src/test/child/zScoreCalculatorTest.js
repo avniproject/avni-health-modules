@@ -28,7 +28,7 @@ describe("zScoreCalculator", () => {
             const today = new Date();
             individual.dateOfBirth = moment(today).subtract(1, 'month');
 
-            // check for numbers outside -4 and 4
+            // check for numbers outside -3 and 3
             assert.equal(zScore(individual, today, 1.2).wfa, -6.8);
             assert.equal(zScore(individual, today, 4.5).wfa, 0);
             assert.equal(zScore(individual, today, 5.1).wfa, 1);
@@ -39,7 +39,13 @@ describe("zScoreCalculator", () => {
             individual.dateOfBirth = moment(today).subtract(26, 'month');
             assert.equal(zScore(individual, today, 6.3).wfa, -5.4);
 
+            individual.dateOfBirth = moment(today).subtract(13, 'month');
+            assert.equal(zScore(individual, today, 25).wfa, 11.1);
+
             individual.gender = female;
+
+            individual.dateOfBirth = moment(today).subtract(19, 'month');
+            assert.equal(zScore(individual, today, 63).wfa, 27.6);
 
             individual.dateOfBirth = moment(today).subtract(1, 'month');
             assert.equal(zScore(individual, today, 2.7).wfa, -3.1);
