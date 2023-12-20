@@ -38,7 +38,7 @@ function calc_sd(reference, sd) {
     return M * Math.pow(1 + (L * S * sd), (1 / L));
 }
 
-function roundToOneDecimal(value) {
+function roundToTwoDecimal(value) {
     return Math.round(100 * value) / 100;
 }
 
@@ -60,12 +60,12 @@ const calculate = (value, reference) => {
     const sd23pos = sd3pos - calc_sd(reference, 2);
     const sd23neg = calc_sd(reference, -2) - sd3neg;
 
-    let zScore = roundToOneDecimal((Math.pow(value / reference.M, reference.L) - 1) / (reference.S * reference.L));
+    let zScore = roundToTwoDecimal((Math.pow(value / reference.M, reference.L) - 1) / (reference.S * reference.L));
 
     if (Math.round(zScore) > 3)
-        zScore = roundToOneDecimal(3 + ((value - sd3pos) / sd23pos));
+        zScore = roundToTwoDecimal(3 + ((value - sd3pos) / sd23pos));
     else if (Math.round(zScore) < -3)
-        zScore = roundToOneDecimal(-3 + ((value - sd3neg) / sd23neg));
+        zScore = roundToTwoDecimal(-3 + ((value - sd3neg) / sd23neg));
 
     return zScore;
 };
