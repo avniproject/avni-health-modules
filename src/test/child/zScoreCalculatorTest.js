@@ -133,13 +133,13 @@ describe("zScoreCalculator", () => {
             assert.equal(zScore(individual, today, 10.5, 68.5).wfh, 3.04);
 
             individual.dateOfBirth = moment(today).subtract(35, 'months').toDate();
-            assert.equal(zScore(individual, today, 7.1, 72).wfh, -3.02);
-            assert.equal(zScore(individual, today, 7.65, 72).wfh, -2.06);
-            assert.equal(zScore(individual, today, 8.3, 72).wfh, -1.02);
-            assert.equal(zScore(individual, today, 9.02, 72).wfh, 0);
-            assert.equal(zScore(individual, today, 9.8, 72).wfh, 0.99);
-            assert.equal(zScore(individual, today, 10.7, 72).wfh, 2);
-            assert.equal(zScore(individual, today, 11.7, 72).wfh, 3.01);
+            assert.equal(zScore(individual, today, 6.5, 68.5).wfh, -3.01);
+            assert.equal(zScore(individual, today, 7.0, 68.5).wfh, -2.04);
+            assert.equal(zScore(individual, today, 7.6, 68.5).wfh, -1);
+            assert.equal(zScore(individual, today, 8.2, 68.5).wfh, -0.06);
+            assert.equal(zScore(individual, today, 9.0, 68.5).wfh, 1.06);
+            assert.equal(zScore(individual, today, 9.8, 68.5).wfh, 2.04);
+            assert.equal(zScore(individual, today, 10.7, 68.5).wfh, 3.03);
         });
 
         it("calculates weight for height z-scores for girls between 0 and 5", () => {
