@@ -151,10 +151,10 @@ describe("zScoreCalculator", () => {
             assert.equal(zScore(individual, today, 5.8, 67.0).wfh, -3.01);
             assert.equal(zScore(individual, today, 6.3, 67.0).wfh, -2.03);
             assert.equal(zScore(individual, today, 6.9, 67.0).wfh, -0.97);
-            assert.equal(zScore(individual, today, 7.6, 67.0).wfh, 0.1);
+            assert.equal(zScore(individual, today, 7.5, 67.0).wfh, -0.04);
             assert.equal(zScore(individual, today, 8.3, 67.0).wfh, 1.05);
             assert.equal(zScore(individual, today, 9.1, 67.0).wfh, 2.01);
-            assert.equal(zScore(individual, today, 10.05, 67.0).wfh, 3);
+            assert.equal(zScore(individual, today, 10.0, 67.0).wfh, 2.96);
 
             individual.dateOfBirth = moment(today).subtract(35, 'months').toDate();
             assert.equal(zScore(individual, today, 6.2, 68.5).wfh, -2.95);
@@ -163,7 +163,7 @@ describe("zScoreCalculator", () => {
             assert.equal(zScore(individual, today, 8, 68.5).wfh, 0);
             assert.equal(zScore(individual, today, 8.8, 68.5).wfh, 1.03);
             assert.equal(zScore(individual, today, 9.7, 68.5).wfh, 2.05);
-            assert.equal(zScore(individual, today, 10.66, 68.5).wfh, 3);
+            assert.equal(zScore(individual, today, 10.7, 68.5).wfh, 3.03);
         });
 
         it("does not calculate weight for age or weight for height if weight does not exist or is 0", () => {
