@@ -12,8 +12,8 @@ import weightForAgeScoresBoys from './anthropometry/wfa_boys.json';
 import heightForAgeScoresGirls from  './anthropometry/lhfa_girls.json';
 import heightForAgeScoresBoys from  './anthropometry/lhfa_boys.json';
 
-import weightForHeightScoresGirls from  './anthropometry/wflh_girls.json';
-import weightForHeightScoresBoys from  './anthropometry/wflh_boys.json';
+import weightForHeightScoresGirls from  './anthropometry/wflh_girls_0-to-2-years.json';
+import weightForHeightScoresBoys from  './anthropometry/wflh_boys_0-to-2-years.json';
 
 
 

@@ -1,10 +1,7 @@
 import zScores, {projectedSD2NegForWeight} from "./zScoreCalculator";
 import {RuleFactory} from 'rules-config/rules';
-import weightForAgeScoresGirls from './anthropometry/wfa_girls.json';
-import weightForAgeScoresBoys from './anthropometry/wfa_boys.json';
 import _ from "lodash";
 import moment from "moment";
-import C from "../common";
 
 const AnthropometryDecision = RuleFactory("d062907a-690c-44ca-b699-f8b2f688b075", "Decision");
 

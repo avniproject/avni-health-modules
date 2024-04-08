@@ -3,16 +3,21 @@ import wfa_boys from "./anthropometry/wfa_boys.json";
 import wfa_girls from "./anthropometry/wfa_girls.json";
 import hfa_boys from "./anthropometry/lhfa_boys.json";
 import hfa_girls from "./anthropometry/lhfa_girls.json";
-import wfh_boys from "./anthropometry/wflh_boys.json";
-import wfh_girls from "./anthropometry/wflh_girls.json";
+import wfh_boys_upto_2_years from "./anthropometry/wflh_boys_0-to-2-years.json";
+import wfh_boys_after_2_years from "./anthropometry/wflh_boys_2-to-5-years.json";
+import wfh_girls_upto_2_years from "./anthropometry/wflh_girls_0-to-2-years.json";
+import wfh_girls_after_2_years from "./anthropometry/wflh_girls_2-to-5-years.json";
 
 const isPropNil = (o, path) => _.isNil(_.get(o, path));
 
 const anthropometricReference = {
     wfa: {Male: wfa_boys, Female: wfa_girls},
-    hfa: {Male: hfa_boys, Female: hfa_girls},
-    wfh: {Male: wfh_boys, Female: wfh_girls}
+    hfa: {Male: hfa_boys, Female: hfa_girls}
 };
+
+const anthropometricWFHReferenceForAgeUpto2Years = {Male: wfh_boys_upto_2_years, Female: wfh_girls_upto_2_years};
+
+const anthropometricWFHReferenceForAgeAbove2Years = {Male: wfh_boys_after_2_years, Female: wfh_girls_after_2_years};
 
 const roundedHeight = (num) => {
     return Math.round(num * 2) / 2;
@@ -23,8 +28,9 @@ const getWfaReference = (gender, ageInMonths) => {
     return _.find(wfaReference, (item) => item.Month === ageInMonths);
 }
 
-const getWfhReference = (gender, height) => {
-    let wfhReference = _.get(anthropometricReference, ["wfh", gender]);
+const getWfhReference = (gender, height, ageInMonths) => {
+    let wfhReference = _.get(ageInMonths < 24 ? anthropometricWFHReferenceForAgeUpto2Years :
+      anthropometricWFHReferenceForAgeAbove2Years, [gender]);
     return _.find(wfhReference, (item) => item.x === roundedHeight(height));
 }
 
@@ -73,7 +79,7 @@ const calculate = (value, reference) => {
 const calculateZScore = (gender, ageInMonths, weight, height) => {
     let wfaReference = getWfaReference(gender, ageInMonths);
     let hfaReference = getHfaReference(gender, ageInMonths);
-    let wfhReference = getWfhReference(gender, height);
+    let wfhReference = getWfhReference(gender, height, ageInMonths);
 
     return {
         wfa: calculate(weight, wfaReference),
