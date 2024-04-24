@@ -96,7 +96,6 @@ describe("zScoreCalculator", () => {
             let today = new Date();
             individual.dateOfBirth = moment(today).subtract(26, 'months').toDate();
             individual.gender = female;
-
             assert.equal(zScore(individual, today, 0, 77.5).hfa, -2.99);
             assert.equal(zScore(individual, today, 0, 80.8).hfa, -2);
             assert.equal(zScore(individual, today, 0, 84.1).hfa, -1);
@@ -122,8 +121,7 @@ describe("zScoreCalculator", () => {
             let today = new Date();
             individual.dateOfBirth = moment(today).subtract(23, 'months').toDate();
             individual.gender = male;
-
-
+            assert.isUndefined(zScore(individual, today, 10, 40.0).wfh);
             assert.equal(zScore(individual, today, 6.4, 68.5).wfh, -2.96);
             assert.equal(zScore(individual, today, 6.9, 68.5).wfh, -1.98);
             assert.equal(zScore(individual, today, 7.5, 68.5).wfh, -0.92);
@@ -133,6 +131,7 @@ describe("zScoreCalculator", () => {
             assert.equal(zScore(individual, today, 10.5, 68.5).wfh, 3.04);
 
             individual.dateOfBirth = moment(today).subtract(35, 'months').toDate();
+            assert.isUndefined(zScore(individual, today, 10, 50.0).wfh);
             assert.equal(zScore(individual, today, 6.5, 68.5).wfh, -3.01);
             assert.equal(zScore(individual, today, 7.0, 68.5).wfh, -2.04);
             assert.equal(zScore(individual, today, 7.6, 68.5).wfh, -1);
