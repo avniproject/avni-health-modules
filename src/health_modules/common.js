@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import moment from 'moment';
-import getZScore,  {projectedSD2NegForWeight} from './child/zScoreCalculator';
+import getZScore, {projectedSD2NegForWeight} from './child/zScoreCalculator';
+import calculateGrowthStatus from "./adolescent/growthStatusCalculator"
 
 function C() {
 
@@ -37,6 +38,9 @@ function C() {
     this.calculateBMI = function (weight, height) {
         return _.ceil((weight / Math.pow(height, 2)) * 10000, 1);
     };
+    this.calculateGrowthStatusForAdolescent = function ({individual, weight, asOnDate}) {
+        return calculateGrowthStatus(individual,weight,asOnDate)
+    }
 
     /* todo
      handle case to increment # of month if day of month > 20

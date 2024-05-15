@@ -1,0 +1,1082 @@
+[
+  {
+    "month": 121,
+    "severe_mn": 12.796,
+    "moderate_mn": 13.759,
+    "mild_mn": 14.952,
+    "normal": 16.481,
+    "mild_ob": 18.532,
+    "moderate_ob": 21.483,
+    "severe_ob": 26.231
+  },
+  {
+    "month": 122,
+    "severe_mn": 12.817,
+    "moderate_mn": 13.784,
+    "mild_mn": 14.982,
+    "normal": 16.519,
+    "mild_ob": 18.586,
+    "moderate_ob": 21.568,
+    "severe_ob": 26.391
+  },
+  {
+    "month": 123,
+    "severe_mn": 12.838,
+    "moderate_mn": 13.808,
+    "mild_mn": 15.012,
+    "normal": 16.558,
+    "mild_ob": 18.64,
+    "moderate_ob": 21.653,
+    "severe_ob": 26.552
+  },
+  {
+    "month": 124,
+    "severe_mn": 12.86,
+    "moderate_mn": 13.834,
+    "mild_mn": 15.043,
+    "normal": 16.597,
+    "mild_ob": 18.696,
+    "moderate_ob": 21.739,
+    "severe_ob": 26.714
+  },
+  {
+    "month": 125,
+    "severe_mn": 12.882,
+    "moderate_mn": 13.86,
+    "mild_mn": 15.074,
+    "normal": 16.638,
+    "mild_ob": 18.751,
+    "moderate_ob": 21.826,
+    "severe_ob": 26.875
+  },
+  {
+    "month": 126,
+    "severe_mn": 12.905,
+    "moderate_mn": 13.886,
+    "mild_mn": 15.106,
+    "normal": 16.679,
+    "mild_ob": 18.808,
+    "moderate_ob": 21.914,
+    "severe_ob": 27.04
+  },
+  {
+    "month": 127,
+    "severe_mn": 12.928,
+    "moderate_mn": 13.913,
+    "mild_mn": 15.139,
+    "normal": 16.72,
+    "mild_ob": 18.865,
+    "moderate_ob": 22.002,
+    "severe_ob": 27.204
+  },
+  {
+    "month": 128,
+    "severe_mn": 12.952,
+    "moderate_mn": 13.941,
+    "mild_mn": 15.172,
+    "normal": 16.763,
+    "mild_ob": 18.923,
+    "moderate_ob": 22.09,
+    "severe_ob": 27.367
+  },
+  {
+    "month": 129,
+    "severe_mn": 12.976,
+    "moderate_mn": 13.969,
+    "mild_mn": 15.206,
+    "normal": 16.806,
+    "mild_ob": 18.982,
+    "moderate_ob": 22.18,
+    "severe_ob": 27.533
+  },
+  {
+    "month": 130,
+    "severe_mn": 13.001,
+    "moderate_mn": 13.998,
+    "mild_mn": 15.241,
+    "normal": 16.85,
+    "mild_ob": 19.042,
+    "moderate_ob": 22.271,
+    "severe_ob": 27.698
+  },
+  {
+    "month": 131,
+    "severe_mn": 13.026,
+    "moderate_mn": 14.027,
+    "mild_mn": 15.276,
+    "normal": 16.894,
+    "mild_ob": 19.102,
+    "moderate_ob": 22.362,
+    "severe_ob": 27.863
+  },
+  {
+    "month": 132,
+    "severe_mn": 13.051,
+    "moderate_mn": 14.056,
+    "mild_mn": 15.312,
+    "normal": 16.939,
+    "mild_ob": 19.163,
+    "moderate_ob": 22.452,
+    "severe_ob": 28.027
+  },
+  {
+    "month": 133,
+    "severe_mn": 13.077,
+    "moderate_mn": 14.087,
+    "mild_mn": 15.348,
+    "normal": 16.985,
+    "mild_ob": 19.224,
+    "moderate_ob": 22.544,
+    "severe_ob": 28.192
+  },
+  {
+    "month": 134,
+    "severe_mn": 13.103,
+    "moderate_mn": 14.117,
+    "mild_mn": 15.385,
+    "normal": 17.031,
+    "mild_ob": 19.287,
+    "moderate_ob": 22.637,
+    "severe_ob": 28.357
+  },
+  {
+    "month": 135,
+    "severe_mn": 13.13,
+    "moderate_mn": 14.148,
+    "mild_mn": 15.422,
+    "normal": 17.078,
+    "mild_ob": 19.349,
+    "moderate_ob": 22.729,
+    "severe_ob": 28.52
+  },
+  {
+    "month": 136,
+    "severe_mn": 13.157,
+    "moderate_mn": 14.18,
+    "mild_mn": 15.461,
+    "normal": 17.126,
+    "mild_ob": 19.413,
+    "moderate_ob": 22.822,
+    "severe_ob": 28.684
+  },
+  {
+    "month": 137,
+    "severe_mn": 13.185,
+    "moderate_mn": 14.212,
+    "mild_mn": 15.499,
+    "normal": 17.175,
+    "mild_ob": 19.477,
+    "moderate_ob": 22.915,
+    "severe_ob": 28.846
+  },
+  {
+    "month": 138,
+    "severe_mn": 13.213,
+    "moderate_mn": 14.245,
+    "mild_mn": 15.539,
+    "normal": 17.224,
+    "mild_ob": 19.542,
+    "moderate_ob": 23.009,
+    "severe_ob": 29.008
+  },
+  {
+    "month": 139,
+    "severe_mn": 13.241,
+    "moderate_mn": 14.278,
+    "mild_mn": 15.578,
+    "normal": 17.273,
+    "mild_ob": 19.607,
+    "moderate_ob": 23.104,
+    "severe_ob": 29.169
+  },
+  {
+    "month": 140,
+    "severe_mn": 13.27,
+    "moderate_mn": 14.312,
+    "mild_mn": 15.619,
+    "normal": 17.324,
+    "mild_ob": 19.674,
+    "moderate_ob": 23.199,
+    "severe_ob": 29.329
+  },
+  {
+    "month": 141,
+    "severe_mn": 13.3,
+    "moderate_mn": 14.347,
+    "mild_mn": 15.66,
+    "normal": 17.375,
+    "mild_ob": 19.741,
+    "moderate_ob": 23.293,
+    "severe_ob": 29.487
+  },
+  {
+    "month": 142,
+    "severe_mn": 13.33,
+    "moderate_mn": 14.382,
+    "mild_mn": 15.702,
+    "normal": 17.427,
+    "mild_ob": 19.808,
+    "moderate_ob": 23.389,
+    "severe_ob": 29.645
+  },
+  {
+    "month": 143,
+    "severe_mn": 13.36,
+    "moderate_mn": 14.417,
+    "mild_mn": 15.745,
+    "normal": 17.48,
+    "mild_ob": 19.877,
+    "moderate_ob": 23.485,
+    "severe_ob": 29.802
+  },
+  {
+    "month": 144,
+    "severe_mn": 13.391,
+    "moderate_mn": 14.453,
+    "mild_mn": 15.788,
+    "normal": 17.533,
+    "mild_ob": 19.946,
+    "moderate_ob": 23.581,
+    "severe_ob": 29.957
+  },
+  {
+    "month": 145,
+    "severe_mn": 13.422,
+    "moderate_mn": 14.49,
+    "mild_mn": 15.833,
+    "normal": 17.588,
+    "mild_ob": 20.015,
+    "moderate_ob": 23.677,
+    "severe_ob": 30.11
+  },
+  {
+    "month": 146,
+    "severe_mn": 13.454,
+    "moderate_mn": 14.528,
+    "mild_mn": 15.877,
+    "normal": 17.643,
+    "mild_ob": 20.086,
+    "moderate_ob": 23.774,
+    "severe_ob": 30.262
+  },
+  {
+    "month": 147,
+    "severe_mn": 13.487,
+    "moderate_mn": 14.566,
+    "mild_mn": 15.923,
+    "normal": 17.698,
+    "mild_ob": 20.157,
+    "moderate_ob": 23.871,
+    "severe_ob": 30.412
+  },
+  {
+    "month": 148,
+    "severe_mn": 13.52,
+    "moderate_mn": 14.605,
+    "mild_mn": 15.969,
+    "normal": 17.755,
+    "mild_ob": 20.229,
+    "moderate_ob": 23.969,
+    "severe_ob": 30.561
+  },
+  {
+    "month": 149,
+    "severe_mn": 13.554,
+    "moderate_mn": 14.644,
+    "mild_mn": 16.016,
+    "normal": 17.812,
+    "mild_ob": 20.302,
+    "moderate_ob": 24.067,
+    "severe_ob": 30.708
+  },
+  {
+    "month": 150,
+    "severe_mn": 13.588,
+    "moderate_mn": 14.684,
+    "mild_mn": 16.063,
+    "normal": 17.87,
+    "mild_ob": 20.375,
+    "moderate_ob": 24.165,
+    "severe_ob": 30.854
+  },
+  {
+    "month": 151,
+    "severe_mn": 13.622,
+    "moderate_mn": 14.724,
+    "mild_mn": 16.112,
+    "normal": 17.929,
+    "mild_ob": 20.449,
+    "moderate_ob": 24.263,
+    "severe_ob": 30.998
+  },
+  {
+    "month": 152,
+    "severe_mn": 13.658,
+    "moderate_mn": 14.766,
+    "mild_mn": 16.161,
+    "normal": 17.989,
+    "mild_ob": 20.524,
+    "moderate_ob": 24.362,
+    "severe_ob": 31.138
+  },
+  {
+    "month": 153,
+    "severe_mn": 13.693,
+    "moderate_mn": 14.807,
+    "mild_mn": 16.21,
+    "normal": 18.049,
+    "mild_ob": 20.599,
+    "moderate_ob": 24.46,
+    "severe_ob": 31.278
+  },
+  {
+    "month": 154,
+    "severe_mn": 13.729,
+    "moderate_mn": 14.849,
+    "mild_mn": 16.26,
+    "normal": 18.11,
+    "mild_ob": 20.675,
+    "moderate_ob": 24.559,
+    "severe_ob": 31.417
+  },
+  {
+    "month": 155,
+    "severe_mn": 13.766,
+    "moderate_mn": 14.892,
+    "mild_mn": 16.311,
+    "normal": 18.171,
+    "mild_ob": 20.751,
+    "moderate_ob": 24.658,
+    "severe_ob": 31.551
+  },
+  {
+    "month": 156,
+    "severe_mn": 13.802,
+    "moderate_mn": 14.935,
+    "mild_mn": 16.362,
+    "normal": 18.233,
+    "mild_ob": 20.829,
+    "moderate_ob": 24.757,
+    "severe_ob": 31.686
+  },
+  {
+    "month": 157,
+    "severe_mn": 13.839,
+    "moderate_mn": 14.979,
+    "mild_mn": 16.414,
+    "normal": 18.296,
+    "mild_ob": 20.906,
+    "moderate_ob": 24.856,
+    "severe_ob": 31.816
+  },
+  {
+    "month": 158,
+    "severe_mn": 13.877,
+    "moderate_mn": 15.023,
+    "mild_mn": 16.466,
+    "normal": 18.359,
+    "mild_ob": 20.984,
+    "moderate_ob": 24.954,
+    "severe_ob": 31.945
+  },
+  {
+    "month": 159,
+    "severe_mn": 13.915,
+    "moderate_mn": 15.067,
+    "mild_mn": 16.519,
+    "normal": 18.422,
+    "mild_ob": 21.062,
+    "moderate_ob": 25.053,
+    "severe_ob": 32.073
+  },
+  {
+    "month": 160,
+    "severe_mn": 13.953,
+    "moderate_mn": 15.112,
+    "mild_mn": 16.572,
+    "normal": 18.486,
+    "mild_ob": 21.14,
+    "moderate_ob": 25.152,
+    "severe_ob": 32.197
+  },
+  {
+    "month": 161,
+    "severe_mn": 13.991,
+    "moderate_mn": 15.157,
+    "mild_mn": 16.625,
+    "normal": 18.55,
+    "mild_ob": 21.219,
+    "moderate_ob": 25.249,
+    "severe_ob": 32.317
+  },
+  {
+    "month": 162,
+    "severe_mn": 14.029,
+    "moderate_mn": 15.202,
+    "mild_mn": 16.679,
+    "normal": 18.615,
+    "mild_ob": 21.298,
+    "moderate_ob": 25.347,
+    "severe_ob": 32.436
+  },
+  {
+    "month": 163,
+    "severe_mn": 14.068,
+    "moderate_mn": 15.247,
+    "mild_mn": 16.733,
+    "normal": 18.68,
+    "mild_ob": 21.376,
+    "moderate_ob": 25.444,
+    "severe_ob": 32.551
+  },
+  {
+    "month": 164,
+    "severe_mn": 14.107,
+    "moderate_mn": 15.293,
+    "mild_mn": 16.787,
+    "normal": 18.744,
+    "mild_ob": 21.455,
+    "moderate_ob": 25.54,
+    "severe_ob": 32.663
+  },
+  {
+    "month": 165,
+    "severe_mn": 14.145,
+    "moderate_mn": 15.338,
+    "mild_mn": 16.841,
+    "normal": 18.81,
+    "mild_ob": 21.534,
+    "moderate_ob": 25.635,
+    "severe_ob": 32.772
+  },
+  {
+    "month": 166,
+    "severe_mn": 14.184,
+    "moderate_mn": 15.384,
+    "mild_mn": 16.895,
+    "normal": 18.875,
+    "mild_ob": 21.613,
+    "moderate_ob": 25.731,
+    "severe_ob": 32.88
+  },
+  {
+    "month": 167,
+    "severe_mn": 14.222,
+    "moderate_mn": 15.429,
+    "mild_mn": 16.95,
+    "normal": 18.94,
+    "mild_ob": 21.691,
+    "moderate_ob": 25.825,
+    "severe_ob": 32.985
+  },
+  {
+    "month": 168,
+    "severe_mn": 14.261,
+    "moderate_mn": 15.475,
+    "mild_mn": 17.004,
+    "normal": 19.005,
+    "mild_ob": 21.77,
+    "moderate_ob": 25.918,
+    "severe_ob": 33.084
+  },
+  {
+    "month": 169,
+    "severe_mn": 14.299,
+    "moderate_mn": 15.521,
+    "mild_mn": 17.058,
+    "normal": 19.07,
+    "mild_ob": 21.848,
+    "moderate_ob": 26.011,
+    "severe_ob": 33.182
+  },
+  {
+    "month": 170,
+    "severe_mn": 14.337,
+    "moderate_mn": 15.566,
+    "mild_mn": 17.113,
+    "normal": 19.135,
+    "mild_ob": 21.926,
+    "moderate_ob": 26.103,
+    "severe_ob": 33.279
+  },
+  {
+    "month": 171,
+    "severe_mn": 14.375,
+    "moderate_mn": 15.611,
+    "mild_mn": 17.167,
+    "normal": 19.2,
+    "mild_ob": 22.004,
+    "moderate_ob": 26.194,
+    "severe_ob": 33.371
+  },
+  {
+    "month": 172,
+    "severe_mn": 14.414,
+    "moderate_mn": 15.657,
+    "mild_mn": 17.221,
+    "normal": 19.265,
+    "mild_ob": 22.081,
+    "moderate_ob": 26.284,
+    "severe_ob": 33.459
+  },
+  {
+    "month": 173,
+    "severe_mn": 14.451,
+    "moderate_mn": 15.702,
+    "mild_mn": 17.275,
+    "normal": 19.329,
+    "mild_ob": 22.158,
+    "moderate_ob": 26.373,
+    "severe_ob": 33.546
+  },
+  {
+    "month": 174,
+    "severe_mn": 14.489,
+    "moderate_mn": 15.747,
+    "mild_mn": 17.329,
+    "normal": 19.394,
+    "mild_ob": 22.235,
+    "moderate_ob": 26.462,
+    "severe_ob": 33.631
+  },
+  {
+    "month": 175,
+    "severe_mn": 14.526,
+    "moderate_mn": 15.791,
+    "mild_mn": 17.382,
+    "normal": 19.458,
+    "mild_ob": 22.311,
+    "moderate_ob": 26.549,
+    "severe_ob": 33.712
+  },
+  {
+    "month": 176,
+    "severe_mn": 14.563,
+    "moderate_mn": 15.836,
+    "mild_mn": 17.435,
+    "normal": 19.522,
+    "mild_ob": 22.387,
+    "moderate_ob": 26.635,
+    "severe_ob": 33.791
+  },
+  {
+    "month": 177,
+    "severe_mn": 14.6,
+    "moderate_mn": 15.88,
+    "mild_mn": 17.489,
+    "normal": 19.585,
+    "mild_ob": 22.462,
+    "moderate_ob": 26.72,
+    "severe_ob": 33.866
+  },
+  {
+    "month": 178,
+    "severe_mn": 14.636,
+    "moderate_mn": 15.924,
+    "mild_mn": 17.541,
+    "normal": 19.649,
+    "mild_ob": 22.537,
+    "moderate_ob": 26.804,
+    "severe_ob": 33.941
+  },
+  {
+    "month": 179,
+    "severe_mn": 14.672,
+    "moderate_mn": 15.968,
+    "mild_mn": 17.594,
+    "normal": 19.712,
+    "mild_ob": 22.611,
+    "moderate_ob": 26.887,
+    "severe_ob": 34.012
+  },
+  {
+    "month": 180,
+    "severe_mn": 14.708,
+    "moderate_mn": 16.011,
+    "mild_mn": 17.647,
+    "normal": 19.774,
+    "mild_ob": 22.685,
+    "moderate_ob": 26.969,
+    "severe_ob": 34.081
+  },
+  {
+    "month": 181,
+    "severe_mn": 14.744,
+    "moderate_mn": 16.054,
+    "mild_mn": 17.699,
+    "normal": 19.837,
+    "mild_ob": 22.758,
+    "moderate_ob": 27.051,
+    "severe_ob": 34.149
+  },
+  {
+    "month": 182,
+    "severe_mn": 14.779,
+    "moderate_mn": 16.097,
+    "mild_mn": 17.75,
+    "normal": 19.899,
+    "mild_ob": 22.831,
+    "moderate_ob": 27.13,
+    "severe_ob": 34.213
+  },
+  {
+    "month": 183,
+    "severe_mn": 14.814,
+    "moderate_mn": 16.14,
+    "mild_mn": 17.802,
+    "normal": 19.96,
+    "mild_ob": 22.903,
+    "moderate_ob": 27.21,
+    "severe_ob": 34.275
+  },
+  {
+    "month": 184,
+    "severe_mn": 14.848,
+    "moderate_mn": 16.182,
+    "mild_mn": 17.853,
+    "normal": 20.022,
+    "mild_ob": 22.975,
+    "moderate_ob": 27.288,
+    "severe_ob": 34.337
+  },
+  {
+    "month": 185,
+    "severe_mn": 14.882,
+    "moderate_mn": 16.224,
+    "mild_mn": 17.904,
+    "normal": 20.082,
+    "mild_ob": 23.046,
+    "moderate_ob": 27.365,
+    "severe_ob": 34.395
+  },
+  {
+    "month": 186,
+    "severe_mn": 14.916,
+    "moderate_mn": 16.265,
+    "mild_mn": 17.954,
+    "normal": 20.143,
+    "mild_ob": 23.116,
+    "moderate_ob": 27.441,
+    "severe_ob": 34.452
+  },
+  {
+    "month": 187,
+    "severe_mn": 14.95,
+    "moderate_mn": 16.306,
+    "mild_mn": 18.004,
+    "normal": 20.203,
+    "mild_ob": 23.186,
+    "moderate_ob": 27.515,
+    "severe_ob": 34.505
+  },
+  {
+    "month": 188,
+    "severe_mn": 14.982,
+    "moderate_mn": 16.347,
+    "mild_mn": 18.053,
+    "normal": 20.262,
+    "mild_ob": 23.255,
+    "moderate_ob": 27.59,
+    "severe_ob": 34.559
+  },
+  {
+    "month": 189,
+    "severe_mn": 15.015,
+    "moderate_mn": 16.387,
+    "mild_mn": 18.103,
+    "normal": 20.321,
+    "mild_ob": 23.324,
+    "moderate_ob": 27.662,
+    "severe_ob": 34.61
+  },
+  {
+    "month": 190,
+    "severe_mn": 15.047,
+    "moderate_mn": 16.427,
+    "mild_mn": 18.151,
+    "normal": 20.38,
+    "mild_ob": 23.391,
+    "moderate_ob": 27.734,
+    "severe_ob": 34.66
+  },
+  {
+    "month": 191,
+    "severe_mn": 15.078,
+    "moderate_mn": 16.466,
+    "mild_mn": 18.199,
+    "normal": 20.438,
+    "mild_ob": 23.459,
+    "moderate_ob": 27.805,
+    "severe_ob": 34.708
+  },
+  {
+    "month": 192,
+    "severe_mn": 15.109,
+    "moderate_mn": 16.505,
+    "mild_mn": 18.247,
+    "normal": 20.495,
+    "mild_ob": 23.525,
+    "moderate_ob": 27.875,
+    "severe_ob": 34.754
+  },
+  {
+    "month": 193,
+    "severe_mn": 15.14,
+    "moderate_mn": 16.543,
+    "mild_mn": 18.295,
+    "normal": 20.552,
+    "mild_ob": 23.591,
+    "moderate_ob": 27.943,
+    "severe_ob": 34.797
+  },
+  {
+    "month": 194,
+    "severe_mn": 15.17,
+    "moderate_mn": 16.581,
+    "mild_mn": 18.342,
+    "normal": 20.608,
+    "mild_ob": 23.656,
+    "moderate_ob": 28.011,
+    "severe_ob": 34.84
+  },
+  {
+    "month": 195,
+    "severe_mn": 15.199,
+    "moderate_mn": 16.619,
+    "mild_mn": 18.388,
+    "normal": 20.664,
+    "mild_ob": 23.721,
+    "moderate_ob": 28.078,
+    "severe_ob": 34.881
+  },
+  {
+    "month": 196,
+    "severe_mn": 15.228,
+    "moderate_mn": 16.656,
+    "mild_mn": 18.434,
+    "normal": 20.72,
+    "mild_ob": 23.785,
+    "moderate_ob": 28.143,
+    "severe_ob": 34.922
+  },
+  {
+    "month": 197,
+    "severe_mn": 15.257,
+    "moderate_mn": 16.692,
+    "mild_mn": 18.479,
+    "normal": 20.774,
+    "mild_ob": 23.847,
+    "moderate_ob": 28.207,
+    "severe_ob": 34.959
+  },
+  {
+    "month": 198,
+    "severe_mn": 15.285,
+    "moderate_mn": 16.728,
+    "mild_mn": 18.524,
+    "normal": 20.829,
+    "mild_ob": 23.91,
+    "moderate_ob": 28.271,
+    "severe_ob": 34.997
+  },
+  {
+    "month": 199,
+    "severe_mn": 15.312,
+    "moderate_mn": 16.763,
+    "mild_mn": 18.568,
+    "normal": 20.882,
+    "mild_ob": 23.972,
+    "moderate_ob": 28.334,
+    "severe_ob": 35.032
+  },
+  {
+    "month": 200,
+    "severe_mn": 15.339,
+    "moderate_mn": 16.798,
+    "mild_mn": 18.612,
+    "normal": 20.936,
+    "mild_ob": 24.032,
+    "moderate_ob": 28.395,
+    "severe_ob": 35.066
+  },
+  {
+    "month": 201,
+    "severe_mn": 15.365,
+    "moderate_mn": 16.833,
+    "mild_mn": 18.655,
+    "normal": 20.988,
+    "mild_ob": 24.093,
+    "moderate_ob": 28.456,
+    "severe_ob": 35.098
+  },
+  {
+    "month": 202,
+    "severe_mn": 15.391,
+    "moderate_mn": 16.867,
+    "mild_mn": 18.698,
+    "normal": 21.04,
+    "mild_ob": 24.152,
+    "moderate_ob": 28.515,
+    "severe_ob": 35.13
+  },
+  {
+    "month": 203,
+    "severe_mn": 15.417,
+    "moderate_mn": 16.9,
+    "mild_mn": 18.741,
+    "normal": 21.091,
+    "mild_ob": 24.211,
+    "moderate_ob": 28.573,
+    "severe_ob": 35.158
+  },
+  {
+    "month": 204,
+    "severe_mn": 15.441,
+    "moderate_mn": 16.933,
+    "mild_mn": 18.782,
+    "normal": 21.142,
+    "mild_ob": 24.269,
+    "moderate_ob": 28.63,
+    "severe_ob": 35.187
+  },
+  {
+    "month": 205,
+    "severe_mn": 15.465,
+    "moderate_mn": 16.965,
+    "mild_mn": 18.823,
+    "normal": 21.192,
+    "mild_ob": 24.327,
+    "moderate_ob": 28.687,
+    "severe_ob": 35.215
+  },
+  {
+    "month": 206,
+    "severe_mn": 15.489,
+    "moderate_mn": 16.997,
+    "mild_mn": 18.864,
+    "normal": 21.242,
+    "mild_ob": 24.383,
+    "moderate_ob": 28.742,
+    "severe_ob": 35.24
+  },
+  {
+    "month": 207,
+    "severe_mn": 15.512,
+    "moderate_mn": 17.028,
+    "mild_mn": 18.904,
+    "normal": 21.291,
+    "mild_ob": 24.439,
+    "moderate_ob": 28.797,
+    "severe_ob": 35.264
+  },
+  {
+    "month": 208,
+    "severe_mn": 15.534,
+    "moderate_mn": 17.059,
+    "mild_mn": 18.944,
+    "normal": 21.34,
+    "mild_ob": 24.494,
+    "moderate_ob": 28.85,
+    "severe_ob": 35.287
+  },
+  {
+    "month": 209,
+    "severe_mn": 15.556,
+    "moderate_mn": 17.089,
+    "mild_mn": 18.983,
+    "normal": 21.388,
+    "mild_ob": 24.549,
+    "moderate_ob": 28.903,
+    "severe_ob": 35.31
+  },
+  {
+    "month": 210,
+    "severe_mn": 15.577,
+    "moderate_mn": 17.118,
+    "mild_mn": 19.022,
+    "normal": 21.435,
+    "mild_ob": 24.603,
+    "moderate_ob": 28.954,
+    "severe_ob": 35.331
+  },
+  {
+    "month": 211,
+    "severe_mn": 15.598,
+    "moderate_mn": 17.147,
+    "mild_mn": 19.06,
+    "normal": 21.482,
+    "mild_ob": 24.656,
+    "moderate_ob": 29.005,
+    "severe_ob": 35.351
+  },
+  {
+    "month": 212,
+    "severe_mn": 15.618,
+    "moderate_mn": 17.176,
+    "mild_mn": 19.097,
+    "normal": 21.528,
+    "mild_ob": 24.708,
+    "moderate_ob": 29.054,
+    "severe_ob": 35.369
+  },
+  {
+    "month": 213,
+    "severe_mn": 15.637,
+    "moderate_mn": 17.204,
+    "mild_mn": 19.134,
+    "normal": 21.574,
+    "mild_ob": 24.76,
+    "moderate_ob": 29.103,
+    "severe_ob": 35.387
+  },
+  {
+    "month": 214,
+    "severe_mn": 15.656,
+    "moderate_mn": 17.231,
+    "mild_mn": 19.171,
+    "normal": 21.619,
+    "mild_ob": 24.811,
+    "moderate_ob": 29.15,
+    "severe_ob": 35.402
+  },
+  {
+    "month": 215,
+    "severe_mn": 15.674,
+    "moderate_mn": 17.258,
+    "mild_mn": 19.207,
+    "normal": 21.664,
+    "mild_ob": 24.861,
+    "moderate_ob": 29.197,
+    "severe_ob": 35.417
+  },
+  {
+    "month": 216,
+    "severe_mn": 15.692,
+    "moderate_mn": 17.284,
+    "mild_mn": 19.242,
+    "normal": 21.708,
+    "mild_ob": 24.911,
+    "moderate_ob": 29.243,
+    "severe_ob": 35.432
+  },
+  {
+    "month": 217,
+    "severe_mn": 15.709,
+    "moderate_mn": 17.31,
+    "mild_mn": 19.277,
+    "normal": 21.751,
+    "mild_ob": 24.959,
+    "moderate_ob": 29.287,
+    "severe_ob": 35.443
+  },
+  {
+    "month": 218,
+    "severe_mn": 15.725,
+    "moderate_mn": 17.335,
+    "mild_mn": 19.311,
+    "normal": 21.794,
+    "mild_ob": 25.008,
+    "moderate_ob": 29.331,
+    "severe_ob": 35.455
+  },
+  {
+    "month": 219,
+    "severe_mn": 15.741,
+    "moderate_mn": 17.36,
+    "mild_mn": 19.344,
+    "normal": 21.836,
+    "mild_ob": 25.055,
+    "moderate_ob": 29.373,
+    "severe_ob": 35.465
+  },
+  {
+    "month": 220,
+    "severe_mn": 15.756,
+    "moderate_mn": 17.383,
+    "mild_mn": 19.377,
+    "normal": 21.877,
+    "mild_ob": 25.102,
+    "moderate_ob": 29.415,
+    "severe_ob": 35.476
+  },
+  {
+    "month": 221,
+    "severe_mn": 15.771,
+    "moderate_mn": 17.407,
+    "mild_mn": 19.41,
+    "normal": 21.918,
+    "mild_ob": 25.147,
+    "moderate_ob": 29.455,
+    "severe_ob": 35.483
+  },
+  {
+    "month": 222,
+    "severe_mn": 15.784,
+    "moderate_mn": 17.429,
+    "mild_mn": 19.442,
+    "normal": 21.958,
+    "mild_ob": 25.193,
+    "moderate_ob": 29.496,
+    "severe_ob": 35.492
+  },
+  {
+    "month": 223,
+    "severe_mn": 15.798,
+    "moderate_mn": 17.452,
+    "mild_mn": 19.473,
+    "normal": 21.998,
+    "mild_ob": 25.237,
+    "moderate_ob": 29.534,
+    "severe_ob": 35.498
+  },
+  {
+    "month": 224,
+    "severe_mn": 15.811,
+    "moderate_mn": 17.473,
+    "mild_mn": 19.504,
+    "normal": 22.037,
+    "mild_ob": 25.281,
+    "moderate_ob": 29.572,
+    "severe_ob": 35.503
+  },
+  {
+    "month": 225,
+    "severe_mn": 15.823,
+    "moderate_mn": 17.495,
+    "mild_mn": 19.535,
+    "normal": 22.076,
+    "mild_ob": 25.324,
+    "moderate_ob": 29.609,
+    "severe_ob": 35.507
+  },
+  {
+    "month": 226,
+    "severe_mn": 15.834,
+    "moderate_mn": 17.515,
+    "mild_mn": 19.564,
+    "normal": 22.114,
+    "mild_ob": 25.366,
+    "moderate_ob": 29.646,
+    "severe_ob": 35.512
+  },
+  {
+    "month": 227,
+    "severe_mn": 15.845,
+    "moderate_mn": 17.535,
+    "mild_mn": 19.594,
+    "normal": 22.151,
+    "mild_ob": 25.408,
+    "moderate_ob": 29.681,
+    "severe_ob": 35.515
+  },
+  {
+    "month": 228,
+    "severe_mn": 15.855,
+    "moderate_mn": 17.554,
+    "mild_mn": 19.622,
+    "normal": 22.188,
+    "mild_ob": 25.449,
+    "moderate_ob": 29.716,
+    "severe_ob": 35.516
+  }
+]
