@@ -22,6 +22,10 @@ describe('CommonTest', () => {
         const bmi = C.calculateBMI(35, 160);
         assert.equal(bmi, 13.7);
     });
+    it('show BMI in 3 decimal precision if precision pass as parameter', () => {
+        const bmi = C.calculateBMI(35, 160,3);
+        assert.equal(bmi, 13.672);
+    });
 
     it('isEmptyOrBlank should correctly identify empty values', () => {
         expect(C.isEmptyOrBlank()).to.be.true; 
