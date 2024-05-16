@@ -35,8 +35,8 @@ function C() {
         )
     };
 
-    this.calculateBMI = function (weight, height) {
-        return _.ceil((weight / Math.pow(height, 2)) * 10000, 1);
+    this.calculateBMI = function (weight, height, precision = 1) {
+        return _.ceil((weight / Math.pow(height, 2)) * 10000, precision);
     };
     this.calculateGrowthStatusForAdolescent = function ({individual, weight, asOnDate}) {
         return calculateGrowthStatus(individual,weight,asOnDate)
