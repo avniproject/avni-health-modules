@@ -1,13 +1,27 @@
 import C from "../health_modules/common";
-
 import {assert, expect} from "chai";
 import TestHelper from './TestHelper';
+import {Gender, Individual} from 'avni-models';
+
 
 const checkForInvalidDate = (dateValue) =>{
     return TestHelper.checkForInvalidDate(dateValue);
 };
 
 describe('CommonTest', () => {
+    let individual, male, female;
+
+    beforeEach(() => {
+        male = new Gender();
+        male.name = 'Male';
+
+        female = new Gender();
+        female.name = 'Female';
+
+        individual = Individual.newInstance("2425e7ce-5872-42c0-b3f2-95a134830478", "Raman", "Singh", '05/15/2024', true, male, 1);
+    });
+
+
     it('addDays', () => {
         var date = new Date();
         var copiedDate = C.copyDate(date);
@@ -56,4 +70,14 @@ describe('CommonTest', () => {
         expect(checkForInvalidDate('2023-08-21 06:51:48')).to.be.an('boolean').with.eq(false);
         expect(checkForInvalidDate('2023-08-21')).to.be.an('boolean').with.eq(false);
     });
+    it("Should calculate the growth status for the boys", () => {
+        assert.deepStrictEqual(C.calculateGrowthStatusForAdolescent({individual, weight:44, height:179, asOnDate:new Date('01/01/2040')}), {zScore: -3});
+        assert.deepStrictEqual(C.calculateGrowthStatusForAdolescent({individual,weight:49,height:179, asOnDate:'01/01/2040'}), {zScore: -2});
+        assert.deepStrictEqual(C.calculateGrowthStatusForAdolescent({individual,weight:48,height:170, asOnDate:'01/01/2040'}), {zScore: -1});
+        assert.deepStrictEqual(C.calculateGrowthStatusForAdolescent({individual,weight:54.5,height:170, asOnDate:'01/01/2040'}), {zScore: 0});
+        assert.deepStrictEqual(C.calculateGrowthStatusForAdolescent({individual,weight:51,height:150, asOnDate:'01/01/2040'}), {zScore: 1});
+        assert.deepStrictEqual(C.calculateGrowthStatusForAdolescent({individual,weight:55,height:150, asOnDate:'01/01/2040'}), {zScore: 2});
+        assert.deepStrictEqual(C.calculateGrowthStatusForAdolescent({individual,weight:65,height:150, asOnDate:'01/01/2040'}), {zScore: 3});
+        assert.deepStrictEqual(C.calculateGrowthStatusForAdolescent({individual,weight:80,height:150, asOnDate:'01/01/2040'}), {zScore: 3});
+    })
 });
