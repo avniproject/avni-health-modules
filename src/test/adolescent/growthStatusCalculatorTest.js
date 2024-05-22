@@ -35,6 +35,12 @@ describe("calculateGrowthStatus()", () => {
         assert.deepStrictEqual(calculateGrowthStatus(individualFemale, 27, '05/15/2041'), {zScore: 2});
         assert.deepStrictEqual(calculateGrowthStatus(individualFemale, 36.7, '05/15/2041'), {zScore: 3});
     })
+    it("should return undefined if age is less than 121 months", () => {
+        assert.deepStrictEqual(calculateGrowthStatus(individualFemale, 10, '05/15/2025'), {zScore: undefined})
+    })
+    it("should return undefined if age is greater than 228 months", () => {
+        assert.deepStrictEqual(calculateGrowthStatus(individualFemale, 10, '05/15/2045'), {zScore: undefined})
+    })
 
 })
 

@@ -27,8 +27,11 @@ const calculateGrowthStatus = (individual, bmi, asOnDate) => {
     let gender = _.get(individual, "gender.name");
     let growthStatusValuesJson = gender === 'Female' ? growthChartGirls : growthChartBoys;
     let values = _.find(growthStatusValuesJson, (item) => item.month == ageInMonths);
-
-    return {zScore: getStatus(getStatusData(values), bmi)};
+    if (ageInMonths < 121 || ageInMonths > 228) {
+        return {zScore: undefined};
+    } else {
+        return {zScore: getStatus(getStatusData(values), bmi)};
+    }
 }
 
 export default calculateGrowthStatus;
