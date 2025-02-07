@@ -16,7 +16,11 @@ help:
 define _deploy
 	rm -rf $1/*
 	mkdir $1/dist
+	mkdir $1/src
+	mkdir $1/node_modules
 	cp -r dist/* $1/dist/
+	cp -r src/* $1/src/
+	cp -r node_modules/* $1/node_modules/
 	cp ./* $1/
 endef
 
@@ -57,4 +61,4 @@ ifeq ($(local),)
 	@echo -e '\nPlease provide the local location of node modules where to install. e.g. local=../avni-web-app/ or local=../avni-client/packages/openchs-android \n'
 	@exit 1
 endif
-	$(call _deploy,$(local)/node_modules/avni-health-modules/dist)
+	$(call _deploy,$(local)/node_modules/avni-health-modules)
