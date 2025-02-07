@@ -1,8 +1,7 @@
-import childProgramConfig from "./child/childProgramConfig";
+import growthChartConfig from "./child/growthChartConfig";
 
 const programConfigExports = {};
-programConfigExports.Child = childProgramConfig;
-programConfigExports.Phulwari = childProgramConfig;
+programConfigExports.programName = growthChartConfig;
 
 const config = function (programName) {
     return !programName ? programConfigExports : programConfigExports[programName];

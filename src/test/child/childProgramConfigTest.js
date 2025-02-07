@@ -1,4 +1,4 @@
-import config from "../../health_modules/child/childProgramConfig";
+import config from "../../health_modules/child/growthChartConfig";
 const expect = require('chai').expect;
 import _ from "lodash";
 import {ProgramEnrolment, Gender, Individual} from 'avni-models';
