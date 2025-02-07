@@ -4,7 +4,7 @@ const programConfigExports = {};
 programConfigExports.programName = growthChartConfig;
 
 const config = function (programName) {
-    return !programName ? programConfigExports : programConfigExports[programName];
+    return !programName ? programConfigExports : programConfigExports.programName;
 };
 
 export {
